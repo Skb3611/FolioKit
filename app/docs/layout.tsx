@@ -1,13 +1,11 @@
-import SideBar from "@/components/docs/sidebar";
-import React from "react";
+import { source } from '@/lib/source';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { baseOptions } from '@/lib/layout.shared';
 
-const DocsLayout = ({ children }: { children: React.ReactNode }) => {
+export default function Layout({ children }: LayoutProps<'/docs'>) {
   return (
-    <div className="grid grid-cols-[0.5fr_2fr] max-w-6xl mx-auto min-h-screen border-border/50 border-x px-4 py-5">
-      <SideBar />
+    <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
       {children}
-    </div>
+    </DocsLayout>
   );
-};
-
-export default DocsLayout;
+}
