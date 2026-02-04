@@ -13,7 +13,7 @@ const sidebarItems = components.map((c) => ({
 const SideBar = () => {
   console.log(sidebarItems);
   return (
-    <div className="flex flex-col items-start gap-2 border-r border-border/50">
+    <div className="flex flex-col items-start gap-2 border-r border-border/50 w-full min-h-screen">
       {sidebarItems.map((item) => (
         <Button key={item.href} variant={"ghost"} size={"xs"}>
           <a href={item.href} className="text-sm ">
