@@ -1,18 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hello-world",
+  "type": "registry:component",
   "title": "Hello World",
   "description": "Hello World Description",
   "dependencies": [],
-  "devDependencies": [],
   "registryDependencies": [],
+  "devDependencies": [],
   "files": [
     {
       "path": "registry/foliokit/hello-world/index.tsx",
-      "content": "export function HelloWorld() {\r\n  return <h1 className=\"text-2xl font-bold\">Hello World</h1>\r\n}\r\n",
       "type": "registry:ui",
       "target": "components/foliokit/hello-world/hello-world.tsx"
     }
-  ],
-  "type": "registry:component"
+  ]
 }
