@@ -15,6 +15,7 @@ This repository is structured as follows:
 
 ```
 FolioKit
+├── __registry__ (shadcn/ui registry auto generated)
 ├── app (Nextjs App)
 ├── components (FolioKit Components)
 ├── config
@@ -134,60 +135,135 @@ The documentation is located in the `content` folder and follows a structure sim
 ```
 content
 ├── components
-│   ├── animate
-│   ├── backgrounds
-│   ├── base
-│   ├── buttons
-│   ├── community
-│   ├── headless
-│   └── radix
+│   ├── your-component.mdx
 └── index.mdx
 
 ```
 
- exemple:
+ example:
 
 ```mdx
 ---
-title: My Component
-description: Description for the new component
-author:
-  name: your name
-  url: https://link-to-your-profile.com
-releaseDate: 2025-XX-XX
+title: Component Name
+date: 2026-02-05
+description: A flexible, reusable button component with multiple variants and states
+author: johndev
 ---
 
-<ComponentPreview name="demo-my-component" />
+<ComponentPreview name="my-component-demo" />
 
 ## Installation
 
-<ComponentInstallation name="my-component" />
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add my-component"
+  __pnpm__="pnpm shadcn@latest add my-component"
+  __yarn__="yarn shadcn@latest add my-component"
+  __bun__="bunx shadcn@latest add my-component"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="my-component" />
+
+.
+.
+(write necessary steps )
+.
+.
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
 
 ## Usage
 
-[Basic usage of the component]
+```tsx import { MyComponent } from "@/components/ui/my-component" ```
 
-## API Reference
 
-### MyComponent
+```tsx 
+export default function App() {
+  return <Button>Click me</Button>
+} ``` 
+
+
+## Examples
+
+### Default Button
+
+<ComponentPreview name="my-component-demo" />
+
+### Button Variants
+
+<ComponentPreview name="button-variants" />
+
+### Button Sizes
+
+<ComponentPreview name="my-component-sizes" />
+
+### Button with Icon
+
+<ComponentPreview name="my-component-with-icon" />
+
+## Props
 
 <TypeTable
   type={{
-    myProps: {
-      description: 'Description for my props',
-      type: 'string',
-      required: true,
+    variant: {
+      description: "The visual style variant of the button",
+      type: '"default" | "secondary" | "outline" | "ghost"',
+      default: '"default"',
     },
   }}
 />
 
-## Credits
+## API Reference
 
-- Credits to [you](https://link-to-your-profile.com) for creating the component
+<Link href="https://react.dev/reference/react-dom/components/my-component">
+  React MyComponent API Reference
+</Link>
+
+### Credits
+
+- Credits to [johndev](https://github.com/johndev) for creating the component
 ```
+
+#### 7. Final Step (Build the Registry)
+
+```bash
+pnpm run registry:build
+```
+
+#### 8. Build & Start
+
+```bash
+pnpm run build
+pnpm run start
+```
+### **Note: Build the project , verify the changes , then raise a PR**
 
 ## Ask for Help
 
 If you need any assistance or have questions, please feel free to open a [GitHub issue](https://github.com/skb3611/FolioKit/issues/new). We are here to help!
+#### OR
+contact us on X [SKB](https://x.com/SKB3611) & [Omkar](https://x.com/Omkar_dhumal07)
 
-Thank you again for your contribution to Animate UIFolioKit! We look forward to seeing your improvements and new components.
+Thank you again for your contribution to FolioKit! We look forward to seeing your improvements and new components.
