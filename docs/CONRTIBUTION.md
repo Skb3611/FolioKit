@@ -142,7 +142,7 @@ content
 
  ### Docs Format:
 
-#### Visit [Example_File](/example.md)
+#### Visit [Example_File](/docs/docs-example.md)
 
 ```mdx
 ---
