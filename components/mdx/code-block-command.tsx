@@ -20,6 +20,9 @@ import {
   CopyButton,
   copyToClipboardWithMeta,
 } from "@/components/mdx/copy-button";
+import { highlightCode } from "@/lib/highlight-code";
+import { Pre } from "fumadocs-ui/components/codeblock";
+import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock";
 
 export function CodeBlockCommand({
   __npm__,
@@ -64,13 +67,8 @@ export function CodeBlockCommand({
         <div className="no-scrollbar overflow-x-auto">
           {Object.entries(tabs).map(([key, value]) => {
             return (
-              <TabsContent
-                key={key}
-                value={key}
-                className="mt-0 px-4 py-3.5 flex items-center justify-between"
-              >
-                <pre>{value}</pre>
-                <CopyButton value={value || ""} />
+              <TabsContent key={key} value={key} className="relative">
+                <DynamicCodeBlock code={value || ""} lang="bash" />
               </TabsContent>
             );
           })}
