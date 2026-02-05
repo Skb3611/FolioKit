@@ -3,17 +3,5 @@
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
-    {
-      "name": "hello-world",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "type": "registry:component",
-      "files": [
-        {
-          "type": "registry:ui",
-          "path": "registry/foliokit/hello-world.tsx"
-        }
-      ]
-    }
   ]
 }

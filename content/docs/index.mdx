@@ -1,7 +1,277 @@
 ---
-title: Introduction 
+title: Fumadocs Components Test
+description: A comprehensive test of all default Fumadocs components with previews and examples
 ---
 
-## Introduction
+# Fumadocs Components Showcase
 
-I love Anime.
+A comprehensive test of all Fumadocs default components with live previews and practical examples.
+
+## Heading Levels
+
+All heading levels are supported for proper document structure:
+
+### Heading 3 - Subsection
+
+Level 3 heading for main sections.
+
+#### Heading 4 - Smaller Section
+
+Level 4 for subsections.
+
+##### Heading 5 - Minor Section
+
+Level 5 for minor sections.
+
+###### Heading 6 - Smallest
+
+Level 6 is the smallest heading available.
+
+## Code Blocks
+
+Code blocks support syntax highlighting for multiple languages. Use tabs to switch between different implementations:
+
+<CodeBlockTabs>
+  <CodeBlockTabsList>
+    <CodeBlockTabsTrigger value="javascript">JavaScript</CodeBlockTabsTrigger>
+    <CodeBlockTabsTrigger value="python">Python</CodeBlockTabsTrigger>
+    <CodeBlockTabsTrigger value="typescript">TypeScript</CodeBlockTabsTrigger>
+  </CodeBlockTabsList>
+  <CodeBlockTab value="javascript">
+    ```javascript
+    function helloWorld() {
+      console.log("Hello, World!");
+    }
+    
+    helloWorld();
+    ```
+  </CodeBlockTab>
+  
+  <CodeBlockTab value="python">
+    ```python
+    def hello_world():
+        print("Hello, World!")
+    
+    hello_world()
+    ```
+  </CodeBlockTab>
+  
+  <CodeBlockTab value="typescript">
+    ```typescript
+    function helloWorld(): void {
+      console.log("Hello, World!");
+    }
+    
+    helloWorld();
+    ```
+  </CodeBlockTab>
+</CodeBlockTabs>
+
+### Pre-formatted Text
+
+Use the `<pre>` component for code without syntax highlighting:
+
+<pre>
+{`ASCII Art Example:
+  ╔═══════════════╗
+  ║ Fumadocs      ║
+  ║ Documentation ║
+  ╚═══════════════╝`}
+</pre>
+
+## Links
+
+The custom `<a>` component handles both internal and external links:
+
+- [Internal Documentation](/docs)
+- [Fumadocs Docs](https://fumadocs.vercel.app)
+- [GitHub Repository](https://github.com/fuma-nama/fumadocs)
+
+## Tables
+
+Tables are great for displaying structured data and comparisons:
+
+| Component | Purpose | Use Case | Version |
+|-----------|---------|----------|---------|
+| CodeBlockTabs | Multi-language code display | Show same code in JS, Python, TS | 1.0+ |
+| Cards | Grid layout | Navigation, feature lists | 1.0+ |
+| Callouts | Alert messages | Info, warnings, errors | 1.0+ |
+| Table | Data display | Comparisons, specifications | 1.0+ |
+
+## Cards Component
+
+Cards are perfect for creating grid layouts of linked content. They support titles, descriptions, and links:
+
+<Cards>
+  <Card
+    title="Documentation"
+    description="Complete API reference and guides"
+    href="/"
+  />
+  <Card
+    title="Examples"
+    description="Real-world implementation examples"
+    href="/"
+  />
+  <Card
+    title="Components"
+    description="Reusable UI components"
+    href="/"
+  />
+  <Card
+    title="Resources"
+    description="Tools, templates, and assets"
+    href="/"
+  />
+</Cards>
+
+### Cards with Icons
+
+You can also use cards in a 2-column or 3-column grid for better organization.
+
+## Callouts
+
+Callouts highlight important information with different semantic types:
+
+### Basic Callout Component
+
+<Callout type="info" title="Information">
+  Use info callouts to provide additional context or helpful tips to your readers.
+</Callout>
+
+<Callout type="warning" title="Important Warning">
+  Warning callouts draw attention to potential issues or breaking changes users should be aware of.
+</Callout>
+
+<Callout type="success" title="Success Message">
+  Success callouts celebrate completed actions or positive outcomes in your documentation.
+</Callout>
+
+<Callout type="error" title="Error Alert">
+  Error callouts highlight critical issues, failures, or dangerous operations that require caution.
+</Callout>
+
+### Callout Container (Advanced)
+
+For more control over the structure, use CalloutContainer with separate title and description:
+
+<CalloutContainer type="info">
+  <CalloutTitle>Getting Started</CalloutTitle>
+  <CalloutDescription>
+    This approach allows you to include multiple paragraphs and complex content within a single callout. You can even add links like [this one](/) for better navigation.
+  </CalloutDescription>
+</CalloutContainer>
+
+<CalloutContainer type="warning">
+  <CalloutTitle>Breaking Changes</CalloutTitle>
+  <CalloutDescription>
+    Version 2.0 introduces several breaking changes. Make sure to review the migration guide before upgrading your project.
+  </CalloutDescription>
+</CalloutContainer>
+
+## Real-World Examples
+
+### Installation Guide
+
+<CodeBlockTabs>
+  <CodeBlockTabsList>
+    <CodeBlockTabsTrigger value="npm">npm</CodeBlockTabsTrigger>
+    <CodeBlockTabsTrigger value="yarn">yarn</CodeBlockTabsTrigger>
+    <CodeBlockTabsTrigger value="pnpm">pnpm</CodeBlockTabsTrigger>
+  </CodeBlockTabsList>
+  <CodeBlockTab value="npm">
+    ```bash
+    npm install fumadocs-core fumadocs-ui
+    ```
+  </CodeBlockTab>
+  
+  <CodeBlockTab value="yarn">
+    ```bash
+    yarn add fumadocs-core fumadocs-ui
+    ```
+  </CodeBlockTab>
+  
+  <CodeBlockTab value="pnpm">
+    ```bash
+    pnpm add fumadocs-core fumadocs-ui
+    ```
+  </CodeBlockTab>
+</CodeBlockTabs>
+
+### Configuration Example
+
+<CodeBlockTabs>
+  <CodeBlockTabsList>
+    <CodeBlockTabsTrigger value="ts">TypeScript</CodeBlockTabsTrigger>
+    <CodeBlockTabsTrigger value="js">JavaScript</CodeBlockTabsTrigger>
+  </CodeBlockTabsList>
+  <CodeBlockTab value="ts">
+    ```typescript
+    import { defineConfig } from 'fumadocs-mdx/config';
+
+    export default defineConfig({
+      lastModifiedTime: 'git',
+      search: {
+        provider: 'algolia',
+      },
+    });
+    ```
+  </CodeBlockTab>
+  
+  <CodeBlockTab value="js">
+    ```javascript
+    import { defineConfig } from 'fumadocs-mdx/config';
+
+    export default defineConfig({
+      lastModifiedTime: 'git',
+      search: {
+        provider: 'algolia',
+      },
+    });
+    ```
+  </CodeBlockTab>
+</CodeBlockTabs>
+
+### Getting Started
+
+<Callout type="info" title="New to Fumadocs?">
+  Start by reading the [installation guide](/docs/getting-started) and explore the component library.
+</Callout>
+
+<Cards>
+  <Card
+    title="📚 Documentation"
+    description="Read the complete API reference"
+    href="/docs"
+  />
+  <Card
+    title="🚀 Quick Start"
+    description="Get up and running in 5 minutes"
+    href="/docs/quick-start"
+  />
+  <Card
+    title="💡 Examples"
+    description="Learn from real-world implementations"
+    href="/examples"
+  />
+  <Card
+    title="🔗 Components"
+    description="Explore all available components"
+    href="/components"
+  />
+</Cards>
+
+### Best Practices
+
+Follow these best practices when using Fumadocs:
+
+1. **Code Blocks** - Use tabs to show multiple languages or implementations
+2. **Callouts** - Choose the right semantic type (info, warning, success, error)
+3. **Cards** - Group related navigation items together
+4. **Tables** - Keep content concise and scannable
+5. **Headings** - Use proper hierarchy (h1, h2, h3, etc.)
+6. **Links** - Use descriptive text for accessibility
+
+<Callout type="success" title="You're all set!">
+  You've explored all Fumadocs components. Now start building amazing documentation!
+</Callout>

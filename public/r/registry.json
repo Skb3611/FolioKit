@@ -3,51 +3,5 @@
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
-    {
-      "name": "index",
-      "type": "registry:style",
-      "dependencies": [
-        "tw-animate-css",
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "utils"
-      ],
-      "cssVars": {},
-      "files": []
-    },
-    {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World Demo",
-      "description": "Hello World Demo Description",
-      "dependencies": [],
-      "registryDependencies": [],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "registry/demo/hello-world-demo/index.tsx",
-          "type": "registry:ui",
-          "target": "components/demo/hello-world-demo/hello-world.tsx"
-        }
-      ]
-    },
-    {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "Hello World Description",
-      "dependencies": [],
-      "registryDependencies": [],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "registry/foliokit/hello-world/index.tsx",
-          "type": "registry:ui",
-          "target": "components/foliokit/hello-world/hello-world.tsx"
-        }
-      ]
-    }
   ]
 }

@@ -10,8 +10,7 @@
   "files": [
     {
       "path": "registry/foliokit/hello-world/index.tsx",
-      "type": "registry:ui",
-      "target": "components/foliokit/hello-world/hello-world.tsx"
+      "type": "registry:ui"
     }
   ]
 }

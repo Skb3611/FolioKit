@@ -666,13 +666,14 @@ export const Icons = {
 export function getIconForLanguageExtension(language: string) {
   switch (language) {
     case "json":
-      return <Icons.json />
+      return <Icons.json className="fill-foreground" />
     case "css":
       return <Icons.css className="fill-foreground" />
     case "js":
     case "jsx":
     case "ts":
     case "tsx":
+      return <Icons.ts className="fill-foreground" />
     case "typescript":
       return <Icons.ts className="fill-foreground" />
     default:

@@ -1,101 +1,45 @@
-import * as React from "react"
-import dynamic from "next/dynamic"
-import Image from "next/image"
-import Link from "next/link"
-
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
+import * as CodeBlockComponents from "fumadocs-ui/components/codeblock";
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Callout } from "@/components/mdx/callout"
-import { CodeBlockCommand } from "@/components/mdx/code-block-command"
-import { CodeCollapsibleWrapper } from "@/components/mdx/code-collapsible-wrapper"
-import { CodeTabs } from "@/components/mdx/code-tabs"
-import { ComponentPreview } from "@/components/mdx/component-preview"
-import { ComponentSource } from "@/components/mdx/component-source"
-import { ComponentsList } from "@/components/mdx/component-list"
-import { CopyButton } from "@/components/mdx/copy-button"
-import { getIconForLanguageExtension } from "@/components/mdx/icons"
-import { TechStack } from "@/components/mdx/tech-stack"
-import { TemplateOpen } from "@/components/mdx/template-open"
-import { TemplatePreview } from "@/components/mdx/template-preview"
-
+} from "@/components/ui/accordion";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Callout } from "@/components/mdx/callout";
+import { CodeBlockCommand } from "@/components/mdx/code-block-command";
+import { CodeCollapsibleWrapper } from "@/components/mdx/code-collapsible-wrapper";
+import { CodeTabs } from "@/components/mdx/code-tabs";
+import { ComponentPreview } from "@/components/mdx/component-preview";
+import { ComponentSource } from "@/components/mdx/component-source";
+import { ComponentsList } from "@/components/mdx/component-list";
+import { CopyButton } from "@/components/mdx/copy-button";
+import { getIconForLanguageExtension } from "@/components/mdx/icons";
+import { TechStack } from "@/components/mdx/tech-stack";
+import { TemplateOpen } from "@/components/mdx/template-open";
+import { TemplatePreview } from "@/components/mdx/template-preview";
+import * as TabsComponents from "fumadocs-ui/components/tabs";
+import defaultMdxComponents from "fumadocs-ui/mdx";
+import * as StepsComponents from "fumadocs-ui/components/steps";
+import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock.core";
 
 export const mdxComponents = {
-  h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
-    <h1
-      className={cn(
-        "font-heading mt-2 scroll-m-28 text-3xl font-bold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h2: ({ className, ...props }: React.ComponentProps<"h2">) => {
-    return (
-      <h2
-        id={props.children
-          ?.toString()
-          .replace(/ /g, "-")
-          .replace(/'/g, "")
-          .replace(/\?/g, "")
-          .toLowerCase()}
-        className={cn(
-          "font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight first:mt-0 lg:mt-8 [&+p]:mt-4! *:[code]:text-xl",
-          className
-        )}
-        {...props}
-      />
-    )
-  },
-  h3: ({ className, ...props }: React.ComponentProps<"h3">) => (
-    <h3
-      className={cn(
-        "font-heading mt-8 scroll-m-28 text-lg font-medium tracking-tight *:[code]:text-xl",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h4: ({ className, ...props }: React.ComponentProps<"h4">) => (
-    <h4
-      className={cn(
-        "font-heading mt-8 scroll-m-28 text-base font-medium tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h5: ({ className, ...props }: React.ComponentProps<"h5">) => (
-    <h5
-      className={cn(
-        "mt-8 scroll-m-28 text-base font-medium tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h6: ({ className, ...props }: React.ComponentProps<"h6">) => (
-    <h6
-      className={cn(
-        "mt-8 scroll-m-28 text-base font-medium tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  a: ({ className, ...props }: React.ComponentProps<"a">) => (
-    <a
-      className={cn("font-medium underline underline-offset-4", className)}
-      {...props}
-    />
-  ),
+  ...TabsComponents,
+  ...StepsComponents,
+  TypeTable,
+  DynamicCodeBlock,
+  ShadcnTabs: Tabs,
+  ShadcnTabsList: TabsList,
+  ShadcnTabsTrigger: TabsTrigger,
+  ShadcnTabsContent: TabsContent,
   p: ({ className, ...props }: React.ComponentProps<"p">) => (
     <p className={cn("leading-relaxed not-first:mt-6", className)} {...props} />
   ),
@@ -115,14 +59,10 @@ export const mdxComponents = {
     <blockquote
       className={cn(
         "bg-muted/50 mt-6 rounded-r-md border-l-2 py-4 pr-4 pl-6 italic",
-        className
+        className,
       )}
       {...props}
     />
-  ),
-  img: ({ className, alt, ...props }: React.ComponentProps<"img">) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img className={cn("rounded-md", className)} alt={alt} {...props} />
   ),
   iframe: ({ className, ...props }: React.ComponentProps<"iframe">) => (
     <iframe className={cn("mt-6 w-full rounded-md", className)} {...props} />
@@ -137,11 +77,6 @@ export const mdxComponents = {
       />
     </div>
   ),
-  table: ({ className, ...props }: React.ComponentProps<"table">) => (
-    <div className="my-6 w-full overflow-x-auto rounded-lg border">
-      <table className={cn("relative w-full text-sm", className)} {...props} />
-    </div>
-  ),
   thead: ({ className, ...props }: React.ComponentProps<"thead">) => (
     <thead className={cn("bg-muted border-b", className)} {...props} />
   ),
@@ -149,7 +84,7 @@ export const mdxComponents = {
     <tr
       className={cn(
         "hover:bg-muted/50 m-0 border-b transition-colors last:border-b-0",
-        className
+        className,
       )}
       {...props}
     />
@@ -158,7 +93,7 @@ export const mdxComponents = {
     <th
       className={cn(
         "min-w-[120px] px-4 py-3 text-left font-semibold [[align=center]]:text-center [[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
@@ -167,26 +102,13 @@ export const mdxComponents = {
     <td
       className={cn(
         "min-w-[120px] px-4 py-3 text-left [[align=center]]:text-center [[align=right]]:text-right",
-        className
+        className,
       )}
       {...props}
     />
   ),
-  pre: ({ className, children, ...props }: React.ComponentProps<"pre">) => {
-    return (
-      <pre
-        className={cn(
-          "no-scrollbar min-w-0 overflow-x-auto px-4 py-3.5 outline-none has-data-highlighted-line:px-0 has-data-line-numbers:px-0 has-data-[slot=tabs]:p-0",
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </pre>
-    )
-  },
   figure: ({ className, ...props }: React.ComponentProps<"figure">) => {
-    return <figure className={cn(className)} {...props} />
+    return <figure className={cn(className)} {...props} />;
   },
   figcaption: ({
     className,
@@ -196,20 +118,20 @@ export const mdxComponents = {
     const iconExtension =
       "data-language" in props && typeof props["data-language"] === "string"
         ? getIconForLanguageExtension(props["data-language"])
-        : null
+        : null;
 
     return (
       <figcaption
         className={cn(
           "text-code-foreground [&_svg]:text-code-foreground flex items-center gap-2 [&_svg]:size-4 [&_svg]:opacity-70",
-          className
+          className,
         )}
         {...props}
       >
         {iconExtension}
         {children}
       </figcaption>
-    )
+    );
   },
   code: ({
     className,
@@ -221,12 +143,12 @@ export const mdxComponents = {
     __bun__,
     ...props
   }: React.ComponentProps<"code"> & {
-    __raw__?: string
-    __src__?: string
-    __npm__?: string
-    __yarn__?: string
-    __pnpm__?: string
-    __bun__?: string
+    __raw__?: string;
+    __src__?: string;
+    __npm__?: string;
+    __yarn__?: string;
+    __pnpm__?: string;
+    __bun__?: string;
   }) => {
     // Inline Code.
     if (typeof props.children === "string") {
@@ -234,15 +156,15 @@ export const mdxComponents = {
         <code
           className={cn(
             "bg-muted relative rounded-md px-[0.3rem] py-[0.2rem] font-mono text-[0.8rem] wrap-break-word outline-none",
-            className
+            className,
           )}
           {...props}
         />
-      )
+      );
     }
 
     // npm command.
-    const isNpmCommand = __npm__ && __yarn__ && __pnpm__ && __bun__
+    const isNpmCommand = __npm__ && __yarn__ && __pnpm__ && __bun__;
     if (isNpmCommand) {
       return (
         <CodeBlockCommand
@@ -251,7 +173,7 @@ export const mdxComponents = {
           __pnpm__={__pnpm__}
           __bun__={__bun__}
         />
-      )
+      );
     }
 
     // Default codeblock.
@@ -260,20 +182,8 @@ export const mdxComponents = {
         {__raw__ && <CopyButton value={__raw__} src={__src__} />}
         <code {...props} />
       </>
-    )
+    );
   },
-  Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
-    <h3
-      className={cn(
-        "font-heading mt-8 scroll-m-32 text-xl font-medium tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  Steps: ({ ...props }) => (
-    <div className="[&>h3]:step steps mb-12 [counter-reset:step]" {...props} />
-  ),
   Image: ({
     src,
     className,
@@ -291,50 +201,7 @@ export const mdxComponents = {
       {...props}
     />
   ),
-  Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => {
-    return <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
-  },
-  TabsList: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof TabsList>) => (
-    <TabsList
-      className={cn(
-        "justify-start gap-4 rounded-none bg-transparent px-0",
-        className
-      )}
-      {...props}
-    />
-  ),
-  TabsTrigger: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof TabsTrigger>) => (
-    <TabsTrigger
-      className={cn(
-        "text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-primary dark:data-[state=active]:border-primary hover:text-primary rounded-none border-0 border-b-2 border-transparent bg-transparent px-0 pb-3 text-base data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent",
-        className
-      )}
-      {...props}
-    />
-  ),
-  TabsContent: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof TabsContent>) => (
-    <TabsContent
-      className={cn(
-        "relative [&_h3.font-heading]:text-base [&_h3.font-heading]:font-medium *:[figure]:first:mt-0 [&>.steps]:mt-6",
-        className
-      )}
-      {...props}
-    />
-  ),
-  Tab: ({ className, ...props }: React.ComponentProps<"div">) => (
-    <div className={cn(className)} {...props} />
-  ),
   Button,
-  Callout,
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -357,7 +224,7 @@ export const mdxComponents = {
     <Link
       className={cn(
         "bg-surface text-surface-foreground hover:bg-surface/80 flex w-full flex-col items-center rounded-xl p-6 transition-colors sm:p-10",
-        className
+        className,
       )}
       {...props}
     />
@@ -365,4 +232,7 @@ export const mdxComponents = {
   TemplateOpen,
   TemplatePreview,
   TechStack,
-}
+  ...defaultMdxComponents,
+  ...CodeBlockComponents,
+  CodeBlockCommand,
+};

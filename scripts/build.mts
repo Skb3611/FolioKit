@@ -25,7 +25,7 @@ function replaceRegistryPaths(inputStr: string): string {
       if (rest.startsWith('hooks/')) {
         return `${quote}@/${rest}${quote}`;
       }
-      return `${quote}@/components/animate-ui/${rest}${quote}`;
+      return `${quote}@/components/foliokit/${rest}${quote}`;
     } else if (content.startsWith('@workspace/ui/')) {
       const rest = content.slice('@workspace/ui/'.length);
       return `${quote}@/${rest}${quote}`;
@@ -197,7 +197,7 @@ export const index: Record<string, any> = {`;
     })()`
         : 'null'
     },
-    command: '@animate-ui/${item.name}',
+    command: '@foliokit/${item.name}',
   },`;
   }
 

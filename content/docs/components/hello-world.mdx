@@ -3,28 +3,30 @@ title: Hello World
 date: 2026-02-05
 description: A simple hello world component
 author: foliokit
-published: true
 ---
 
 <ComponentPreview name="hello-world" />
 
 ## Installation
 
-<Tabs defaultValue="cli">
+<ShadcnTabs  defaultValue="cli">
 
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+<ShadcnTabsContent value="cli">
 
-```bash
-npx shadcn@latest add hello-world
-```
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/hello-world.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/hello-world.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/hello-world.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/hello-world.json"
+/>
 
-</TabsContent>
+</ShadcnTabsContent>
 
-<TabsContent value="manual">
+<ShadcnTabsContent value="manual">
 
 <Steps>
 
@@ -36,11 +38,16 @@ npx shadcn@latest add hello-world
 
 </Steps>
 
-</TabsContent>
+</ShadcnTabsContent>
 
-</Tabs>
+</ShadcnTabs>
 
+## Usage
 
-## Props
+```tsx showLineNumbers
+import { HelloWorld } from "@/components/ui/hello-world";
+```
 
-This component does not accept any props.
+```tsx showLineNumbers
+<HelloWorld />
+```

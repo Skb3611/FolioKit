@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "hello-world",
+  "name": "hello-world-demo",
   "type": "registry:component",
   "title": "Hello World Demo",
   "description": "Hello World Demo Description",
@@ -10,8 +10,7 @@
   "files": [
     {
       "path": "registry/demo/hello-world-demo/index.tsx",
-      "type": "registry:ui",
-      "target": "components/demo/hello-world-demo/hello-world.tsx"
+      "type": "registry:ui"
     }
   ]
 }

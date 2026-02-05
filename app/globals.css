@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/shadcn.css';
 @import 'fumadocs-ui/css/preset.css';
 @custom-variant dark (&:is(.dark *));
 @custom-variant fixed (&:is(.layout-fixed *));
@@ -621,3 +621,9 @@
     @apply mt-6 rounded-lg overflow-hidden;
   }
 }
+.fd-steps{
+  @apply space-y-2 my-2
+}
+
+   
+
