@@ -140,7 +140,9 @@ content
 
 ```
 
- example:
+ ### Docs Format:
+
+#### Visit [Example_File](/example.md)
 
 ```mdx
 ---
