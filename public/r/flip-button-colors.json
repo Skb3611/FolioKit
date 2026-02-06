@@ -12,7 +12,7 @@
     {
       "path": "registry/demo/flip-button-colors/index.tsx",
       "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonColors = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton\r\n        background=\"#000000\"\r\n        flipBackground=\"#ffffff\"\r\n        flipTextColor=\"#000000\"\r\n        flipContent=\"Light\"\r\n      >\r\n        Dark\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#2563eb\"\r\n        flipBackground=\"#1e40af\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#60a5fa\"\r\n        flipContent=\"Blue\"\r\n      >\r\n        Primary\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#16a34a\"\r\n        flipBackground=\"#14532d\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#4ade80\"\r\n        flipContent=\"Go\"\r\n      >\r\n        Success\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonColors\r\n",
-      "type": "registry:ui"
+      "type": "registry:component"
     }
   ],
   "type": "registry:component"

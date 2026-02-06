@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/demo/hello-world-demo/index.tsx",
-      "type": "registry:ui"
+      "type": "registry:component"
     }
   ]
 }

@@ -10,7 +10,7 @@
     {
       "path": "registry/demo/hello-world-demo/index.tsx",
       "content": "import { HelloWorld } from '@/components/foliokit/hello-world'\r\n\r\nconst HelloWorldDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <HelloWorld/>\r\n      <div className=\"ml-4\">\r\n        <p className=\"text-lg font-bold\">Hello World</p>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default HelloWorldDemo\r\n",
-      "type": "registry:ui"
+      "type": "registry:component"
     }
   ],
   "type": "registry:component"

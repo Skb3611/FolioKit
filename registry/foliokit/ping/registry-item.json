@@ -1,16 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "pulse",
+  "name": "ping",
   "type": "registry:component",
-  "title": "Pulse",
-  "description": "Pulse Description",
+  "title": "Ping",
+  "description": "Ping Description",
   "dependencies": [],
   "registryDependencies": [],
   "devDependencies": [],
   "files": [
     {
-      "path": "registry/foliokit/pulse/index.tsx",
-      "type": "registry:ui"
+      "path": "registry/foliokit/ping/index.tsx",
+      "type": "registry:component"
     }
   ]
-}
+} 

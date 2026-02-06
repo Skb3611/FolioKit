@@ -1,0 +1,102 @@
+---
+title: Ping
+date: 2026-02-05
+description: A compact status indicator for real-time activity.
+author: foliokit
+---
+
+<ComponentPreview name="ping-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/ping.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/ping.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/ping.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/ping.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ping" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+### Usage
+
+```tsx
+import Ping from "@/components/foliokit/ping";
+```
+
+```tsx
+<Ping state="active" />
+```
+
+## Examples
+
+### Label
+
+Use `label` to add text.
+
+<ComponentPreview name={"ping-named-demo"} />
+
+### Size
+
+Use `size` to change the size of the pulse. ( `sm` | `md` | `lg` )
+
+<ComponentPreview name={"ping-size-demo"} />
+
+## Props
+
+<TypeTable
+  type={{
+    state: {
+      description: "State of the ping.",
+      type: `active | down | fixing | idle`,
+      required: true,
+      default: "idle",
+    },
+    color: {
+      description: "Change the color of the ping.",
+      type: "string",
+    },
+    label: {
+      description: "Add text to the ping.",
+      type: "string",
+    },
+    size: {
+      description: "Changes the size of the ping.",
+      type: "string",
+      default: "md",
+    },
+    className: {
+      description: "Tailwind classes for ping",
+      type: "string",
+    },
+    labelClassName: {
+      description: "Tailwind classes for label",
+      type: "string",
+    },
+  }}
+/>

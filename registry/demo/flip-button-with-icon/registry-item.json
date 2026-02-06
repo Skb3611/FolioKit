@@ -10,7 +10,7 @@
     "files": [
       {
         "path": "registry/demo/flip-button-with-icon/index.tsx",
-        "type": "registry:ui"
+        "type": "registry:component"
       }
     ]
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface StatusIndicatorProps {
+interface PingProps {
   state: "active" | "down" | "fixing" | "idle";
   color?: string;
   label?: string;
@@ -10,7 +10,7 @@ interface StatusIndicatorProps {
   labelClassName?: string;
 }
 
-const getStateColors = (state: StatusIndicatorProps["state"]) => {
+const getStateColors = (state: PingProps["state"]) => {
   switch (state) {
     case "active":
       return { dot: "bg-green-500", ping: "bg-green-300" };
@@ -24,7 +24,7 @@ const getStateColors = (state: StatusIndicatorProps["state"]) => {
   }
 };
 
-const getSizeClasses = (size: StatusIndicatorProps["size"]) => {
+const getSizeClasses = (size: PingProps["size"]) => {
   switch (size) {
     case "sm":
       return { dot: "h-2 w-2", ping: "h-2 w-2" };
@@ -36,7 +36,7 @@ const getSizeClasses = (size: StatusIndicatorProps["size"]) => {
   }
 };
 
-const StatusIndicator: React.FC<StatusIndicatorProps> = ({
+const Ping: React.FC<PingProps> = ({
   state = "idle",
   color,
   label,
@@ -83,4 +83,4 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({
   );
 };
 
-export default StatusIndicator;
+export default Ping;

@@ -12,7 +12,7 @@
     {
       "path": "registry/demo/flip-button-directions/index.tsx",
       "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonDirections = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton flipFrom=\"top\" flipContent=\"Top\">\r\n        Top\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"bottom\" flipContent=\"Bottom\">\r\n        Bottom\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"left\" flipContent=\"Left\">\r\n        Left\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"right\" flipContent=\"Right\">\r\n        Right\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDirections\r\n",
-      "type": "registry:ui"
+      "type": "registry:component"
     }
   ],
   "type": "registry:component"

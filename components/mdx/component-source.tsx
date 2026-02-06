@@ -13,7 +13,7 @@ export async function ComponentSource({
   src,
   title,
   language,
-  collapsible = true,
+  collapsible = false,
   className,
 }: React.ComponentProps<"div"> & {
   name?: string;
