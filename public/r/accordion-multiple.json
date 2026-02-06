@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-multiple",
+  "title": "accordion multiple",
+  "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/accordion-multiple/index.tsx",
+      "content": "\"use client\"\r\n\r\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/components/foliokit/foliokit/accordion\"\r\n\r\nexport default function AccordionMultiple() {\r\n  return (\r\n    <div className=\"w-full max-w-2xl mx-auto p-4\">\r\n      <Accordion type=\"multiple\" defaultValue={[\"item-1\", \"item-2\"]}>\r\n        <AccordionItem value=\"item-1\">\r\n          <AccordionTrigger>Installation</AccordionTrigger>\r\n          <AccordionContent>\r\n            Install the package using your preferred package manager. Run npm install, pnpm install, \r\n            or yarn install in your project directory.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-2\">\r\n          <AccordionTrigger>Configuration</AccordionTrigger>\r\n          <AccordionContent>\r\n            Configure your project by adding the necessary settings to your configuration file. \r\n            This includes setting up paths, plugins, and environment variables.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-3\">\r\n          <AccordionTrigger>Usage</AccordionTrigger>\r\n          <AccordionContent>\r\n            Import the components you need and use them in your application. The components are \r\n            fully typed and come with comprehensive documentation.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-4\">\r\n          <AccordionTrigger>Troubleshooting</AccordionTrigger>\r\n          <AccordionContent>\r\n            If you encounter any issues, check the documentation or raise an issue on GitHub. \r\n            Common problems include incorrect import paths and missing dependencies.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n      </Accordion>\r\n    </div>\r\n  )\r\n}",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:component"
+}

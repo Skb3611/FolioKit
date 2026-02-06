@@ -1,0 +1,17 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "accordion-single",
+    "type": "registry:component",
+    "title": "accordion single",
+    "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    "dependencies": [],
+    "registryDependencies": [],
+    "devDependencies": [],
+    "files": [
+      {
+        "path": "registry/demo/accordion-single/index.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  }
+  
