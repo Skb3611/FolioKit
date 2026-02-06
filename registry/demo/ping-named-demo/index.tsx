@@ -2,7 +2,7 @@ import Ping from "@/registry/foliokit/ping";
 
 export function PingDemo() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2">
       <Ping state="active" label="Active Ping" />
       <Ping state="down" label="Down Ping" />
       <Ping state="idle" label="Idle Ping" />
