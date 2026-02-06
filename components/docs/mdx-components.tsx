@@ -30,6 +30,7 @@ import * as TabsComponents from "fumadocs-ui/components/tabs";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import * as StepsComponents from "fumadocs-ui/components/steps";
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock.core";
+import ListItems from "./list-items";
 
 export const mdxComponents = {
   ...TabsComponents,
@@ -235,4 +236,5 @@ export const mdxComponents = {
   ...defaultMdxComponents,
   ...CodeBlockComponents,
   CodeBlockCommand,
+  ListItems
 };
