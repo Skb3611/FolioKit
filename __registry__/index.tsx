@@ -18,6 +18,138 @@ export const index: Record<string, any> = {
     component: null,
     command: '@foliokit/index',
   },
+  "accordion-custom": {
+    name: "accordion-custom",
+    description: "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/accordion-custom/index.tsx",
+    "type": "registry:ui",
+    "target": "",
+    "content": "\"use client\"\r\n\r\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/components/foliokit/accordion\"\r\n\r\nexport default function AccordionCustom() {\r\n  return (\r\n    <div className=\"w-full max-w-2xl mx-auto p-4\">\r\n      <Accordion type=\"single\" collapsible className=\"space-y-4\">\r\n        <AccordionItem \r\n          value=\"item-1\" \r\n          className=\"bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 rounded-xl px-6 border-2 border-blue-200 dark:border-blue-800 shadow-sm hover:shadow-md transition-shadow\"\r\n        >\r\n          <AccordionTrigger className=\"text-blue-900 dark:text-blue-100 hover:text-blue-700 dark:hover:text-blue-300\">\r\n            Premium Features\r\n          </AccordionTrigger>\r\n          <AccordionContent className=\"text-blue-800 dark:text-blue-200\">\r\n            Unlock advanced features including priority support, custom integrations, and enhanced security options.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem \r\n          value=\"item-2\" \r\n          className=\"bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 rounded-xl px-6 border-2 border-purple-200 dark:border-purple-800 shadow-sm hover:shadow-md transition-shadow\"\r\n        >\r\n          <AccordionTrigger className=\"text-purple-900 dark:text-purple-100 hover:text-purple-700 dark:hover:text-purple-300\">\r\n            Analytics Dashboard\r\n          </AccordionTrigger>\r\n          <AccordionContent className=\"text-purple-800 dark:text-purple-200\">\r\n            Get detailed insights with our comprehensive analytics dashboard featuring real-time data and custom reports.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem \r\n          value=\"item-3\" \r\n          className=\"bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-xl px-6 border-2 border-green-200 dark:border-green-800 shadow-sm hover:shadow-md transition-shadow\"\r\n        >\r\n          <AccordionTrigger className=\"text-green-900 dark:text-green-100 hover:text-green-700 dark:hover:text-green-300\">\r\n            Team Collaboration\r\n          </AccordionTrigger>\r\n          <AccordionContent className=\"text-green-800 dark:text-green-200\">\r\n            Work together seamlessly with shared workspaces, real-time collaboration, and team management tools.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem \r\n          value=\"item-4\" \r\n          className=\"bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950 dark:to-red-950 rounded-xl px-6 border-2 border-orange-200 dark:border-orange-800 shadow-sm hover:shadow-md transition-shadow\"\r\n        >\r\n          <AccordionTrigger className=\"text-orange-900 dark:text-orange-100 hover:text-orange-700 dark:hover:text-orange-300\">\r\n            Security & Compliance\r\n          </AccordionTrigger>\r\n          <AccordionContent className=\"text-orange-800 dark:text-orange-200\">\r\n            Enterprise-grade security with SOC 2 compliance, encryption at rest and in transit, and advanced access controls.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n      </Accordion>\r\n    </div>\r\n  )\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/accordion-custom/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "accordion-custom";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/accordion-custom',
+  },
+  "accordion-demo": {
+    name: "accordion-demo",
+    description: "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/accordion-demo/index.tsx",
+    "type": "registry:ui",
+    "target": "",
+    "content": "\"use client\"\r\n\r\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/components/foliokit/accordion\"\r\n\r\nexport default function AccordionDemo() {\r\n  return (\r\n    <div className=\"w-full max-w-2xl mx-auto p-4\">\r\n      <Accordion type=\"single\" collapsible>\r\n        <AccordionItem value=\"item-1\">\r\n          <AccordionTrigger>Is it accessible?</AccordionTrigger>\r\n          <AccordionContent>\r\n            Yes. It adheres to the WAI-ARIA design pattern and is built on Radix UI's \r\n            Accordion primitive for full accessibility support.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-2\">\r\n          <AccordionTrigger>Is it styled?</AccordionTrigger>\r\n          <AccordionContent>\r\n            Yes. It comes with default styles that you can customize with Tailwind CSS \r\n            classes or your own custom CSS.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-3\">\r\n          <AccordionTrigger>Is it animated?</AccordionTrigger>\r\n          <AccordionContent>\r\n            Yes. It features smooth animations powered by Motion, including an interactive \r\n            chevron that rotates on hover and when opened.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n      </Accordion>\r\n    </div>\r\n  )\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/accordion-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "accordion-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/accordion-demo',
+  },
+  "accordion-multiple": {
+    name: "accordion-multiple",
+    description: "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/accordion-multiple/index.tsx",
+    "type": "registry:ui",
+    "target": "",
+    "content": "\"use client\"\r\n\r\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/components/foliokit/accordion\"\r\n\r\nexport default function AccordionMultiple() {\r\n  return (\r\n    <div className=\"w-full max-w-2xl mx-auto p-4\">\r\n      <Accordion type=\"multiple\" defaultValue={[\"item-1\", \"item-2\"]}>\r\n        <AccordionItem value=\"item-1\">\r\n          <AccordionTrigger>Installation</AccordionTrigger>\r\n          <AccordionContent>\r\n            Install the package using your preferred package manager. Run npm install, pnpm install, \r\n            or yarn install in your project directory.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-2\">\r\n          <AccordionTrigger>Configuration</AccordionTrigger>\r\n          <AccordionContent>\r\n            Configure your project by adding the necessary settings to your configuration file. \r\n            This includes setting up paths, plugins, and environment variables.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-3\">\r\n          <AccordionTrigger>Usage</AccordionTrigger>\r\n          <AccordionContent>\r\n            Import the components you need and use them in your application. The components are \r\n            fully typed and come with comprehensive documentation.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-4\">\r\n          <AccordionTrigger>Troubleshooting</AccordionTrigger>\r\n          <AccordionContent>\r\n            If you encounter any issues, check the documentation or raise an issue on GitHub. \r\n            Common problems include incorrect import paths and missing dependencies.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n      </Accordion>\r\n    </div>\r\n  )\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/accordion-multiple/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "accordion-multiple";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/accordion-multiple',
+  },
+  "accordion-single": {
+    name: "accordion-single",
+    description: "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/accordion-single/index.tsx",
+    "type": "registry:ui",
+    "target": "",
+    "content": "\"use client\"\r\n\r\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/components/foliokit/accordion\"\r\n\r\nexport default function AccordionSingle() {\r\n  return (\r\n    <div className=\"w-full max-w-2xl mx-auto p-4\">\r\n      <Accordion type=\"single\" collapsible>\r\n        <AccordionItem value=\"item-1\">\r\n          <AccordionTrigger>What is React?</AccordionTrigger>\r\n          <AccordionContent>\r\n            React is a JavaScript library for building user interfaces. It lets you create reusable components\r\n            and manage state efficiently.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-2\">\r\n          <AccordionTrigger>What is Next.js?</AccordionTrigger>\r\n          <AccordionContent>\r\n            Next.js is a React framework that enables functionality such as server-side rendering and \r\n            static site generation for building modern web applications.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n        \r\n        <AccordionItem value=\"item-3\">\r\n          <AccordionTrigger>What is TypeScript?</AccordionTrigger>\r\n          <AccordionContent>\r\n            TypeScript is a strongly typed programming language that builds on JavaScript, giving you \r\n            better tooling at any scale.\r\n          </AccordionContent>\r\n        </AccordionItem>\r\n      </Accordion>\r\n    </div>\r\n  )\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/accordion-single/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "accordion-single";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/accordion-single',
+  },
   "flip-button-colors": {
     name: "flip-button-colors",
     description: "Flip button examples with custom background and text colors",
@@ -195,7 +327,7 @@ export const index: Record<string, any> = {
     "path": "registry/demo/ping-named-demo/index.tsx",
     "type": "registry:component",
     "target": "",
-    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col\">\r\n      <Ping state=\"active\" label=\"Active Ping\" />\r\n      <Ping state=\"down\" label=\"Down Ping\" />\r\n      <Ping state=\"idle\" label=\"Idle Ping\" />\r\n      <Ping state=\"fixing\" label=\"Fixing Ping\" />\r\n      <Ping state=\"active\" size=\"sm\" label=\"Small Active Ping\" />\r\n      <Ping state=\"fixing\" size=\"lg\" label=\"Large Fixing Ping\" />\r\n    </div>\r\n  );\r\n}"
+    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col gap-2\">\r\n      <Ping state=\"active\" label=\"Active Ping\" />\r\n      <Ping state=\"down\" label=\"Down Ping\" />\r\n      <Ping state=\"idle\" label=\"Idle Ping\" />\r\n      <Ping state=\"fixing\" label=\"Fixing Ping\" />\r\n      <Ping state=\"active\" size=\"sm\" label=\"Small Active Ping\" />\r\n      <Ping state=\"fixing\" size=\"lg\" label=\"Large Fixing Ping\" />\r\n    </div>\r\n  );\r\n}"
   }
 ],
     keywords: [],
@@ -228,7 +360,7 @@ export const index: Record<string, any> = {
     "path": "registry/demo/ping-size-demo/index.tsx",
     "type": "registry:component",
     "target": "",
-    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col\">\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}"
+    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col gap-2\">\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}"
   }
 ],
     keywords: [],
@@ -248,6 +380,39 @@ export const index: Record<string, any> = {
       return LazyComp;
     })(),
     command: '@foliokit/ping-size-demo',
+  },
+  "accordion": {
+    name: "accordion",
+    description: "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+    type: "registry:component",
+    dependencies: ["motion","lucide-react","@radix-ui/react-accordion"],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/foliokit/accordion/index.tsx",
+    "type": "registry:ui",
+    "target": "",
+    "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { ChevronDownIcon } from \"lucide-react\"\r\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\"\r\nimport { motion, useMotionValue, useSpring, useTransform } from \"motion/react\"\r\n\r\nfunction cn(...classes: (string | undefined | null | false)[]) {\r\n    return classes.filter(Boolean).join(\" \")\r\n}\r\n\r\nconst Accordion = React.forwardRef<\r\n  React.ElementRef<typeof AccordionPrimitive.Root>,\r\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root>\r\n>(({ ...props }, ref) => {\r\n  return <AccordionPrimitive.Root ref={ref} data-slot=\"accordion\" {...props} />\r\n})\r\nAccordion.displayName = \"Accordion\"\r\n\r\nconst AccordionItem = React.forwardRef<\r\n  React.ComponentRef<typeof AccordionPrimitive.Item>,\r\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>\r\n>(({ className, ...props }, ref) => {\r\n  return (\r\n    <AccordionPrimitive.Item\r\n      ref={ref}\r\n      data-slot=\"accordion-item\"\r\n      className={cn(\"border-b last:border-b-0\", className)}\r\n      {...props}\r\n    />\r\n  )\r\n})\r\nAccordionItem.displayName = \"AccordionItem\"\r\n\r\nconst AccordionTrigger = React.forwardRef<\r\n  React.ComponentRef<typeof AccordionPrimitive.Trigger>,\r\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>\r\n>(({ className, children, ...props }, ref) => {\r\n  const [isHovered, setIsHovered] = React.useState(false)\r\n  const [isOpen, setIsOpen] = React.useState(false)\r\n\r\n  // Motion values for smooth animation\r\n  const hoverProgress = useMotionValue(0)\r\n  const openProgress = useMotionValue(0)\r\n\r\n  // Spring configuration for smooth, bouncy animation\r\n  const springConfig = { stiffness: 300, damping: 25, mass: 0.5 }\r\n  const hoverSpring = useSpring(hoverProgress, springConfig)\r\n  const openSpring = useSpring(openProgress, springConfig)\r\n\r\n  // Transform rotation based on hover and open state\r\n  // Hover: 0 -> 45deg (slight tilt forward)\r\n  // Open: 0 -> 180deg (full rotation)\r\n  const hoverRotation = useTransform(hoverSpring, [0, 1], [0, 45])\r\n  const openRotation = useTransform(openSpring, [0, 1], [0, 180])\r\n\r\n  // Combine both rotations\r\n  const rotation = useTransform(\r\n    [hoverRotation, openRotation],\r\n    ([hover, open]) => {\r\n      if (isOpen) return open as number\r\n      return hover as number\r\n    }\r\n  )\r\n\r\n  // Update motion values when hover/open state changes\r\n  React.useEffect(() => {\r\n    hoverProgress.set(isHovered ? 1 : 0)\r\n  }, [isHovered, hoverProgress])\r\n\r\n  React.useEffect(() => {\r\n    openProgress.set(isOpen ? 1 : 0)\r\n  }, [isOpen, openProgress])\r\n\r\n  return (\r\n    <AccordionPrimitive.Header className=\"flex\">\r\n      <AccordionPrimitive.Trigger\r\n        ref={ref}\r\n        data-slot=\"accordion-trigger\"\r\n        className={cn(\r\n          \"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50\",\r\n          className\r\n        )}\r\n        onMouseEnter={() => !isOpen && setIsHovered(true)}\r\n        onMouseLeave={() => setIsHovered(false)}\r\n        onClick={(e) => {\r\n          setIsOpen(!isOpen)\r\n          setIsHovered(false)\r\n          props.onClick?.(e)\r\n        }}\r\n        {...props}\r\n      >\r\n        {children}\r\n        <motion.div\r\n          style={{ rotate: rotation }}\r\n          className=\"pointer-events-none flex items-center justify-center\"\r\n        >\r\n          <ChevronDownIcon className=\"text-muted-foreground size-4 shrink-0\" />\r\n        </motion.div>\r\n      </AccordionPrimitive.Trigger>\r\n    </AccordionPrimitive.Header>\r\n  )\r\n})\r\nAccordionTrigger.displayName = \"AccordionTrigger\"\r\n\r\nconst AccordionContent = React.forwardRef<\r\n  React.ElementRef<typeof AccordionPrimitive.Content>,\r\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>\r\n>(({ className, children, ...props }, ref) => {\r\n  return (\r\n    <AccordionPrimitive.Content\r\n      ref={ref}\r\n      data-slot=\"accordion-content\"\r\n      className=\"overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\"\r\n      {...props}\r\n    >\r\n      <div className={cn(\"pt-0 pb-4\", className)}>{children}</div>\r\n    </AccordionPrimitive.Content>\r\n  )\r\n})\r\nAccordionContent.displayName = \"AccordionContent\"\r\n\r\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent }"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/foliokit/accordion/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "accordion";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/accordion',
   },
   "flip-button": {
     name: "flip-button",
