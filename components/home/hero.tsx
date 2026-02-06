@@ -4,6 +4,7 @@ import AnimatedBadge from "./badge";
 import { ArrowRightIcon, ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { AvatarCircles } from "../ui/avatar-circles";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,9 +24,11 @@ const Hero = () => {
           Typescript, Tailwind CSS, and Motion.
         </h2>
         <AvatarCircles className="mt-2" avatarUrls={avatarUrls} />
+        <Link href={"/docs"}> 
         <Button className="mt-3">
           Explore Components <ChevronRight />
         </Button>
+        </Link>
       </div>
     </section>
   );
