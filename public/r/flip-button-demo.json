@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-button-demo",
+  "title": "Flip Button Demo",
+  "description": "Demo of Button that flips when Hovered",
+  "dependencies": [
+    "motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/flip-button-demo/index.tsx",
+      "content": "\"use client\"\r\nimport { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\n\r\nconst FlipButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton flipContent=\"Kit!!\">\r\n        Folio\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDemo\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:component"
+}
