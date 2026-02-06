@@ -96,7 +96,7 @@ This is what it should look like:
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "my-component",
-  "type": "registry:ui",
+  "type": "registry:component",
   "title": "My Component",
   "description": "My Component Description",
   "dependencies": [...],
@@ -105,7 +105,7 @@ This is what it should look like:
   "files": [
     {
       "path": "registry/foliokit/my-component/index.tsx",
-      "type": "registry:ui",
+      "type": "registry:component",
       "target": "components/foliokit/my-component/index.tsx"
     }
   ]
@@ -196,7 +196,7 @@ author: johndev
 
 </ShadcnTabs>
 
-## Usage
+### Usage
 
 ```tsx import { MyComponent } from "@/components/ui/my-component" ```
 

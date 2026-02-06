@@ -160,9 +160,9 @@ export const index: Record<string, any> = {
     files: [
   {
     "path": "registry/demo/flip-button-colors/index.tsx",
-    "type": "registry:ui",
+    "type": "registry:component",
     "target": "",
-    "content": "import { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\n\r\nconst FlipButtonColors = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton\r\n        background=\"#000000\"\r\n        flipBackground=\"#ffffff\"\r\n        flipTextColor=\"#000000\"\r\n        flipContent=\"Light\"\r\n      >\r\n        Dark\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#2563eb\"\r\n        flipBackground=\"#1e40af\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#60a5fa\"\r\n        flipContent=\"Blue\"\r\n      >\r\n        Primary\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#16a34a\"\r\n        flipBackground=\"#14532d\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#4ade80\"\r\n        flipContent=\"Go\"\r\n      >\r\n        Success\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonColors"
+    "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonColors = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton\r\n        background=\"#000000\"\r\n        flipBackground=\"#ffffff\"\r\n        flipTextColor=\"#000000\"\r\n        flipContent=\"Light\"\r\n      >\r\n        Dark\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#2563eb\"\r\n        flipBackground=\"#1e40af\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#60a5fa\"\r\n        flipContent=\"Blue\"\r\n      >\r\n        Primary\r\n      </FlipButton>\r\n\r\n      <FlipButton\r\n        background=\"#16a34a\"\r\n        flipBackground=\"#14532d\"\r\n        flipTextColor=\"#ffffff\"\r\n        FlipColor=\"#4ade80\"\r\n        flipContent=\"Go\"\r\n      >\r\n        Success\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonColors"
   }
 ],
     keywords: [],
@@ -193,9 +193,9 @@ export const index: Record<string, any> = {
     files: [
   {
     "path": "registry/demo/flip-button-demo/index.tsx",
-    "type": "registry:ui",
+    "type": "registry:component",
     "target": "",
-    "content": "\"use client\"\r\nimport { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\n\r\nconst FlipButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton flipContent=\"Kit!!\">\r\n        Folio\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDemo"
+    "content": "\"use client\"\r\nimport { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton flipContent=\"Kit!!\">\r\n        Folio\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDemo"
   }
 ],
     keywords: [],
@@ -226,9 +226,9 @@ export const index: Record<string, any> = {
     files: [
   {
     "path": "registry/demo/flip-button-directions/index.tsx",
-    "type": "registry:ui",
+    "type": "registry:component",
     "target": "",
-    "content": "import { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\n\r\nconst FlipButtonDirections = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton flipFrom=\"top\" flipContent=\"Top\">\r\n        Top\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"bottom\" flipContent=\"Bottom\">\r\n        Bottom\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"left\" flipContent=\"Left\">\r\n        Left\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"right\" flipContent=\"Right\">\r\n        Right\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDirections"
+    "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonDirections = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\r\n      <FlipButton flipFrom=\"top\" flipContent=\"Top\">\r\n        Top\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"bottom\" flipContent=\"Bottom\">\r\n        Bottom\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"left\" flipContent=\"Left\">\r\n        Left\r\n      </FlipButton>\r\n\r\n      <FlipButton flipFrom=\"right\" flipContent=\"Right\">\r\n        Right\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDirections"
   }
 ],
     keywords: [],
@@ -259,9 +259,9 @@ export const index: Record<string, any> = {
     files: [
   {
     "path": "registry/demo/flip-button-with-icon/index.tsx",
-    "type": "registry:ui",
+    "type": "registry:component",
     "target": "",
-    "content": "import { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\nimport { ArrowRight } from \"lucide-react\"\r\n\r\nconst FlipButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton\r\n        flipContent={\r\n          <span className=\"flex items-center gap-2\">\r\n            Go <ArrowRight size={16} />\r\n          </span>\r\n        }\r\n      >\r\n        <span className=\"flex items-center gap-2\">\r\n          Start <ArrowRight size={16} />\r\n        </span>\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonWithIcon"
+    "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\nimport { ArrowRight } from \"lucide-react\"\r\n\r\nconst FlipButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton\r\n        flipContent={\r\n          <span className=\"flex items-center gap-2\">\r\n            Go <ArrowRight size={16} />\r\n          </span>\r\n        }\r\n      >\r\n        <span className=\"flex items-center gap-2\">\r\n          Start <ArrowRight size={16} />\r\n        </span>\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonWithIcon"
   }
 ],
     keywords: [],
@@ -282,28 +282,28 @@ export const index: Record<string, any> = {
     })(),
     command: '@foliokit/flip-button-with-icon',
   },
-  "hello-world-demo": {
-    name: "hello-world-demo",
-    description: "Hello World Demo Description",
+  "ping-demo": {
+    name: "ping-demo",
+    description: "A compact status indicator for real-time activity",
     type: "registry:component",
     dependencies: [],
     devDependencies: [],
     registryDependencies: [],
     files: [
   {
-    "path": "registry/demo/hello-world-demo/index.tsx",
-    "type": "registry:ui",
+    "path": "registry/demo/ping-demo/index.tsx",
+    "type": "registry:component",
     "target": "",
-    "content": "import { HelloWorld } from '@/components/foliokit/foliokit/hello-world'\r\n\r\nconst HelloWorldDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <HelloWorld/>\r\n      <div className=\"ml-4\">\r\n        <p className=\"text-lg font-bold\">Hello World</p>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default HelloWorldDemo"
+    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex gap-4\">\r\n      <Ping state=\"active\" />\r\n      <Ping state=\"down\" />\r\n      <Ping state=\"idle\" />\r\n      <Ping state=\"fixing\" />\r\n      <Ping state=\"active\" size=\"sm\" />\r\n      <Ping state=\"fixing\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}"
   }
 ],
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
-        const mod = await import("@/registry/demo/hello-world-demo/index.tsx");
+        const mod = await import("@/registry/demo/ping-demo/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
-        ) || "hello-world-demo";
+        ) || "ping-demo";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -313,7 +313,73 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
-    command: '@foliokit/hello-world-demo',
+    command: '@foliokit/ping-demo',
+  },
+  "ping-named-demo": {
+    name: "ping-named-demo",
+    description: "A compact status indicator for real-time activity with label",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/ping-named-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col\">\r\n      <Ping state=\"active\" label=\"Active Ping\" />\r\n      <Ping state=\"down\" label=\"Down Ping\" />\r\n      <Ping state=\"idle\" label=\"Idle Ping\" />\r\n      <Ping state=\"fixing\" label=\"Fixing Ping\" />\r\n      <Ping state=\"active\" size=\"sm\" label=\"Small Active Ping\" />\r\n      <Ping state=\"fixing\" size=\"lg\" label=\"Large Fixing Ping\" />\r\n    </div>\r\n  );\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/ping-named-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "ping-named-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/ping-named-demo',
+  },
+  "ping-size-demo": {
+    name: "ping-size-demo",
+    description: "A compact status indicator for real-time activity with different sizes",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/ping-size-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col\">\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/ping-size-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "ping-size-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/ping-size-demo',
   },
   "accordion": {
     name: "accordion",
@@ -358,9 +424,9 @@ export const index: Record<string, any> = {
     files: [
   {
     "path": "registry/foliokit/flip-button/index.tsx",
-    "type": "registry:ui",
+    "type": "registry:component",
     "target": "",
-    "content": "\"use client\"\r\n\r\nimport React, { CSSProperties, useEffect } from \"react\"\r\nimport { motion, HTMLMotionProps } from \"motion/react\"\r\n\r\nfunction cn(...classes: (string | undefined | null | false)[]) {\r\n    return classes.filter(Boolean).join(\" \")\r\n}\r\n\r\n// Inject animations into the document\r\nconst injectFlipAnimations = () => {\r\n  if (typeof document === 'undefined') return;\r\n  \r\n  const styleId = 'Flip-animations-styles';\r\n  if (document.getElementById(styleId)) return;\r\n\r\n  const style = document.createElement('style');\r\n  style.id = styleId;\r\n  style.textContent = `\r\n    @keyframes Flip-slide {\r\n      to {\r\n        transform: translate(calc(100cqw - 100%), 0);\r\n      }\r\n    }\r\n\r\n    @keyframes spin-around {\r\n      0% {\r\n        transform: translateZ(0) rotate(0);\r\n      }\r\n      15%, 35% {\r\n        transform: translateZ(0) rotate(90deg);\r\n      }\r\n      65%, 85% {\r\n        transform: translateZ(0) rotate(270deg);\r\n      }\r\n      100% {\r\n        transform: translateZ(0) rotate(360deg);\r\n      }\r\n    }\r\n\r\n    .animate-Flip-slide {\r\n      animation: Flip-slide var(--speed, 3s) ease-in-out infinite alternate;\r\n    }\r\n\r\n    .animate-spin-around {\r\n      animation: spin-around calc(var(--speed, 3s) * 2) infinite linear;\r\n    }\r\n  `;\r\n  document.head.appendChild(style);\r\n};\r\n\r\ninterface FlipButtonProps extends Omit<HTMLMotionProps<\"button\">, 'style'> {\r\n  FlipColor?: string\r\n  FlipSize?: string\r\n  borderRadius?: string\r\n  FlipDuration?:string\r\n  background?: string\r\n  className?: string\r\n  children?: React.ReactNode\r\n  flipContent?: React.ReactNode\r\n  flipFrom?: 'top' | 'bottom' | 'left' | 'right'\r\n  tapScale?: number\r\n  style?: CSSProperties\r\n  flipBackground?: string\r\n  flipTextColor?: string\r\n}\r\n\r\nconst buildVariant = ({\r\n  opacity,\r\n  rotation,\r\n  offset,\r\n  isVertical,\r\n  rotateAxis,\r\n}: {\r\n  opacity: number\r\n  rotation: number\r\n  offset: string | null\r\n  isVertical: boolean\r\n  rotateAxis: string\r\n}) => ({\r\n  opacity,\r\n  [rotateAxis]: rotation,\r\n  ...(isVertical && offset !== null ? { y: offset } : {}),\r\n  ...(!isVertical && offset !== null ? { x: offset } : {}),\r\n})\r\n\r\nconst FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(\r\n  (props, ref) => {\r\n    const {\r\n      FlipColor = \"#ffffff\",\r\n      FlipSize = \"0.05em\",\r\n      FlipDuration = \"3s\",\r\n      borderRadius = \"100px\",\r\n      background = \"rgba(0, 0, 0, 1)\",\r\n      className,\r\n      children,\r\n      flipContent,\r\n      flipFrom = 'top',\r\n      tapScale = 0.95,\r\n      style,\r\n      flipBackground = \"rgba(255, 255, 255, 1)\",\r\n      flipTextColor = \"#000000\",\r\n      ...restProps\r\n    } = props\r\n\r\n    // Inject animations on mount\r\n    useEffect(() => {\r\n      injectFlipAnimations();\r\n    }, []);\r\n\r\n    const isVertical = flipFrom === 'top' || flipFrom === 'bottom'\r\n    const rotateAxis = isVertical ? 'rotateX' : 'rotateY'\r\n    const frontOffset = flipFrom === 'top' || flipFrom === 'left' ? '50%' : '-50%'\r\n    const backOffset = flipFrom === 'top' || flipFrom === 'left' ? '-50%' : '50%'\r\n\r\n    const frontVariants = {\r\n      initial: buildVariant({\r\n        opacity: 1,\r\n        rotation: 0,\r\n        offset: '0%',\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n      hover: buildVariant({\r\n        opacity: 0,\r\n        rotation: 90,\r\n        offset: frontOffset,\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n    }\r\n\r\n    const backVariants = {\r\n      initial: buildVariant({\r\n        opacity: 0,\r\n        rotation: -90,\r\n        offset: backOffset,\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n      hover: buildVariant({\r\n        opacity: 1,\r\n        rotation: 0,\r\n        offset: '0%',\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n    }\r\n\r\n    // Slower, more realistic transition\r\n    const transition = { \r\n      type: 'spring' as const, \r\n      stiffness: 180, \r\n      damping: 25,\r\n      mass: 1.2\r\n    }\r\n\r\n    const buttonStyle: CSSProperties = {\r\n      \"--spread\": \"90deg\",\r\n      \"--flip-color\": FlipColor,\r\n      \"--radius\": borderRadius,\r\n      \"--speed\": FlipDuration,\r\n      \"--cut\": FlipSize,\r\n      \"--bg\": background,\r\n      \"--flip-bg\": flipBackground,\r\n      ...style,\r\n    } as CSSProperties\r\n\r\n    // If no flip content, render regular Flip button\r\n    if (!flipContent) {\r\n      return (\r\n        <button\r\n          style={buttonStyle}\r\n          className={cn(\r\n            \"group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-white/10 whitespace-nowrap text-white [background:var(--bg)]\",\r\n            \"transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px\",\r\n            className\r\n          )}\r\n          ref={ref}\r\n          {...(restProps as React.ButtonHTMLAttributes<HTMLButtonElement>)}\r\n        >\r\n          {/* spark container */}\r\n          <div\r\n            className={cn(\r\n              \"-z-30 blur-[5px]\",\r\n              \"@container-[size] absolute inset-0 overflow-visible\"\r\n            )}\r\n          >\r\n            <div className=\"animate-Flip-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]\">\r\n              <div className=\"animate-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--Flip-color)_var(--spread),transparent_var(--spread))]\" />\r\n            </div>\r\n          </div>\r\n          {children}\r\n\r\n          {/* Highlight */}\r\n          <div\r\n            className={cn(\r\n              \"absolute inset-0 size-full\",\r\n              \"rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]\",\r\n              \"transform-gpu transition-all duration-300 ease-in-out\",\r\n              \"group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]\",\r\n              \"group-active:shadow-[inset_0_-10px_10px_#ffffff3f]\"\r\n            )}\r\n          />\r\n\r\n          {/* backdrop */}\r\n          <div\r\n            className={cn(\r\n              \"absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]\"\r\n            )}\r\n          />\r\n        </button>\r\n      )\r\n    }\r\n\r\n    // Render flip button with Flip effect\r\n    return (\r\n      <motion.button\r\n        initial=\"initial\"\r\n        whileHover=\"hover\"\r\n        whileTap={{ scale: tapScale }}\r\n        style={{\r\n          ...buttonStyle,\r\n          display: 'inline-grid',\r\n          placeItems: 'center',\r\n          perspective: '1000px',\r\n          transformStyle: 'preserve-3d',\r\n        }}\r\n        className={cn(\r\n          \"group relative z-0 cursor-pointer overflow-hidden rounded-lg border border-white/10 px-6 py-3 whitespace-nowrap [background:var(--bg)]\",\r\n          \"transform-gpu\",\r\n          className\r\n        )}\r\n        ref={ref}\r\n        {...restProps}\r\n      >\r\n        {/* Background layer that changes color on hover */}\r\n        <motion.div\r\n          className=\"absolute inset-0 rounded-lg\"\r\n          initial={{ opacity: 0 }}\r\n          variants={{\r\n            initial: { opacity: 0 },\r\n            hover: { opacity: 1 }\r\n          }}\r\n          transition={transition}\r\n          style={{\r\n            background: flipBackground,\r\n            zIndex: 0,\r\n          }}\r\n        />\r\n\r\n        {/* spark container - fades out on hover */}\r\n        <motion.div\r\n          className={cn(\r\n            \"-z-30 blur-[2px]\",\r\n            \"@container-[size] absolute inset-0 overflow-visible\"\r\n          )}\r\n          variants={{\r\n            initial: { opacity: 1 },\r\n            hover: { opacity: 0 }\r\n          }}\r\n          transition={transition}\r\n        >\r\n          <div className=\"animate-Flip-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]\">\r\n            <div className=\"animate-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--Flip-color)_var(--spread),transparent_var(--spread))]\" />\r\n          </div>\r\n        </motion.div>\r\n\r\n        {/* Front face - white text */}\r\n        <motion.span\r\n          variants={frontVariants}\r\n          transition={transition}\r\n          style={{\r\n            gridArea: '1 / 1',\r\n            display: 'inline-flex',\r\n            alignItems: 'center',\r\n            justifyContent: 'center',\r\n            zIndex: 1,\r\n            color: '#ffffff',\r\n            transformStyle: 'preserve-3d',\r\n            backfaceVisibility: 'hidden',\r\n          }}\r\n        >\r\n          {children}\r\n        </motion.span>\r\n\r\n        {/* Back face - black text */}\r\n        <motion.span\r\n          variants={backVariants}\r\n          transition={transition}\r\n          style={{\r\n            gridArea: '1 / 1',\r\n            display: 'inline-flex',\r\n            alignItems: 'center',\r\n            justifyContent: 'center',\r\n            color: flipTextColor,\r\n            zIndex: 1,\r\n            transformStyle: 'preserve-3d',\r\n            backfaceVisibility: 'hidden',\r\n          }}\r\n        >\r\n          {flipContent}\r\n        </motion.span>\r\n\r\n        {/* Highlight - fades out on hover */}\r\n        <motion.div\r\n          className={cn(\r\n            \"absolute inset-0 size-full\",\r\n            \"rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]\",\r\n            \"transform-gpu transition-all duration-300 ease-in-out\",\r\n            \"group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]\",\r\n            \"group-active:shadow-[inset_0_-10px_10px_#ffffff3f]\"\r\n          )}\r\n          variants={{\r\n            initial: { opacity: 1 },\r\n            hover: { opacity: 0 }\r\n          }}\r\n          transition={transition}\r\n        />\r\n\r\n        {/* backdrop */}\r\n        <div\r\n          className={cn(\r\n            \"absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]\"\r\n          )}\r\n        />\r\n      </motion.button>\r\n    )\r\n  }\r\n)\r\n\r\nFlipButton.displayName = \"FlipButton\"\r\n\r\nexport { FlipButton, type FlipButtonProps }"
+    "content": "\"use client\"\r\n\r\nimport React, { CSSProperties, useEffect } from \"react\"\r\nimport { motion, HTMLMotionProps } from \"motion/react\"\r\n\r\nfunction cn(...classes: (string | undefined | null | false)[]) {\r\n    return classes.filter(Boolean).join(\" \")\r\n}\r\n\r\n// Inject animations into the document\r\nconst injectFlipAnimations = () => {\r\n  if (typeof document === 'undefined') return;\r\n  \r\n  const styleId = 'Flip-animations-styles';\r\n  if (document.getElementById(styleId)) return;\r\n\r\n  const style = document.createElement('style');\r\n  style.id = styleId;\r\n  style.textContent = `\r\n    @keyframes Flip-slide {\r\n      to {\r\n        transform: translate(calc(100cqw - 100%), 0);\r\n      }\r\n    }\r\n\r\n    @keyframes spin-around {\r\n      0% {\r\n        transform: translateZ(0) rotate(0);\r\n      }\r\n      15%, 35% {\r\n        transform: translateZ(0) rotate(90deg);\r\n      }\r\n      65%, 85% {\r\n        transform: translateZ(0) rotate(270deg);\r\n      }\r\n      100% {\r\n        transform: translateZ(0) rotate(360deg);\r\n      }\r\n    }\r\n\r\n    .animate-Flip-slide {\r\n      animation: Flip-slide var(--speed, 3s) ease-in-out infinite alternate;\r\n    }\r\n\r\n    .animate-spin-around {\r\n      animation: spin-around calc(var(--speed, 3s) * 2) infinite linear;\r\n    }\r\n  `;\r\n  document.head.appendChild(style);\r\n};\r\n\r\ninterface FlipButtonProps extends Omit<HTMLMotionProps<\"button\">, 'style'> {\r\n  FlipColor?: string\r\n  FlipSize?: string\r\n  borderRadius?: string\r\n  FlipDuration?:string\r\n  background?: string\r\n  className?: string\r\n  children?: React.ReactNode\r\n  flipContent?: React.ReactNode\r\n  flipFrom?: 'top' | 'bottom' | 'left' | 'right'\r\n  tapScale?: number\r\n  style?: CSSProperties\r\n  flipBackground?: string\r\n  flipTextColor?: string\r\n}\r\n\r\nconst buildVariant = ({\r\n  opacity,\r\n  rotation,\r\n  offset,\r\n  isVertical,\r\n  rotateAxis,\r\n}: {\r\n  opacity: number\r\n  rotation: number\r\n  offset: string | null\r\n  isVertical: boolean\r\n  rotateAxis: string\r\n}) => ({\r\n  opacity,\r\n  [rotateAxis]: rotation,\r\n  ...(isVertical && offset !== null ? { y: offset } : {}),\r\n  ...(!isVertical && offset !== null ? { x: offset } : {}),\r\n})\r\n\r\nconst FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(\r\n  (props, ref) => {\r\n    const {\r\n      FlipColor = \"#ffffff\",\r\n      FlipSize = \"0.05em\",\r\n      FlipDuration = \"3s\",\r\n      borderRadius = \"20px\",\r\n      background = \"rgba(0, 0, 0, 1)\",\r\n      className,\r\n      children,\r\n      flipContent,\r\n      flipFrom = 'top',\r\n      tapScale = 0.95,\r\n      style,\r\n      flipBackground = \"rgba(255, 255, 255, 1)\",\r\n      flipTextColor = \"#000000\",\r\n      ...restProps\r\n    } = props\r\n\r\n    // Inject animations on mount\r\n    useEffect(() => {\r\n      injectFlipAnimations();\r\n    }, []);\r\n\r\n    const isVertical = flipFrom === 'top' || flipFrom === 'bottom'\r\n    const rotateAxis = isVertical ? 'rotateX' : 'rotateY'\r\n    const frontOffset = flipFrom === 'top' || flipFrom === 'left' ? '50%' : '-50%'\r\n    const backOffset = flipFrom === 'top' || flipFrom === 'left' ? '-50%' : '50%'\r\n\r\n    const frontVariants = {\r\n      initial: buildVariant({\r\n        opacity: 1,\r\n        rotation: 0,\r\n        offset: '0%',\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n      hover: buildVariant({\r\n        opacity: 0,\r\n        rotation: 90,\r\n        offset: frontOffset,\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n    }\r\n\r\n    const backVariants = {\r\n      initial: buildVariant({\r\n        opacity: 0,\r\n        rotation: -90,\r\n        offset: backOffset,\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n      hover: buildVariant({\r\n        opacity: 1,\r\n        rotation: 0,\r\n        offset: '0%',\r\n        isVertical,\r\n        rotateAxis,\r\n      }),\r\n    }\r\n\r\n    // Slower, more realistic transition\r\n    const transition = { \r\n      type: 'spring' as const, \r\n      stiffness: 180, \r\n      damping: 25,\r\n      mass: 1.2\r\n    }\r\n\r\n    const buttonStyle: CSSProperties = {\r\n      \"--spread\": \"90deg\",\r\n      \"--flip-color\": FlipColor,\r\n      \"--radius\": borderRadius,\r\n      \"--speed\": FlipDuration,\r\n      \"--cut\": FlipSize,\r\n      \"--bg\": background,\r\n      \"--flip-bg\": flipBackground,\r\n      ...style,\r\n    } as CSSProperties\r\n\r\n    // If no flip content, render regular Flip button\r\n    if (!flipContent) {\r\n      return (\r\n        <button\r\n          style={buttonStyle}\r\n          className={cn(\r\n            \"group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-white/10 whitespace-nowrap text-white [background:var(--bg)]\",\r\n            \"transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px\",\r\n            className\r\n          )}\r\n          ref={ref}\r\n          {...(restProps as React.ButtonHTMLAttributes<HTMLButtonElement>)}\r\n        >\r\n          {/* spark container */}\r\n          <div\r\n            className={cn(\r\n              \"-z-30 blur-[5px]\",\r\n              \"@container-[size] absolute inset-0 overflow-visible\"\r\n            )}\r\n          >\r\n            <div className=\"animate-Flip-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]\">\r\n              <div className=\"animate-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--Flip-color)_var(--spread),transparent_var(--spread))]\" />\r\n            </div>\r\n          </div>\r\n          {children}\r\n\r\n          {/* Highlight */}\r\n          <div\r\n            className={cn(\r\n              \"absolute inset-0 size-full\",\r\n              \"rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]\",\r\n              \"transform-gpu transition-all duration-300 ease-in-out\",\r\n              \"group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]\",\r\n              \"group-active:shadow-[inset_0_-10px_10px_#ffffff3f]\"\r\n            )}\r\n          />\r\n\r\n          {/* backdrop */}\r\n          <div\r\n            className={cn(\r\n              \"absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]\"\r\n            )}\r\n          />\r\n        </button>\r\n      )\r\n    }\r\n\r\n    // Render flip button with Flip effect\r\n    return (\r\n      <motion.button\r\n        initial=\"initial\"\r\n        whileHover=\"hover\"\r\n        whileTap={{ scale: tapScale }}\r\n        style={{\r\n          ...buttonStyle,\r\n          display: 'inline-grid',\r\n          placeItems: 'center',\r\n          perspective: '1000px',\r\n          transformStyle: 'preserve-3d',\r\n        }}\r\n        className={cn(\r\n          \"group relative z-0 cursor-pointer overflow-hidden rounded-lg border border-white/10 px-10 py-2 whitespace-nowrap [background:var(--bg)]\",\r\n          \"transform-gpu\",\r\n          className\r\n        )}\r\n        ref={ref}\r\n        {...restProps}\r\n      >\r\n        {/* Background layer that changes color on hover */}\r\n        <motion.div\r\n          className=\"absolute inset-0 rounded-lg\"\r\n          initial={{ opacity: 0 }}\r\n          variants={{\r\n            initial: { opacity: 0 },\r\n            hover: { opacity: 1 }\r\n          }}\r\n          transition={transition}\r\n          style={{\r\n            background: flipBackground,\r\n            zIndex: 0,\r\n          }}\r\n        />\r\n\r\n        {/* spark container - fades out on hover */}\r\n        <motion.div\r\n          className={cn(\r\n            \"-z-30 blur-[2px]\",\r\n            \"@container-[size] absolute inset-0 overflow-visible\"\r\n          )}\r\n          variants={{\r\n            initial: { opacity: 1 },\r\n            hover: { opacity: 0 }\r\n          }}\r\n          transition={transition}\r\n        >\r\n          <div className=\"animate-Flip-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]\">\r\n            <div className=\"animate-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--Flip-color)_var(--spread),transparent_var(--spread))]\" />\r\n          </div>\r\n        </motion.div>\r\n\r\n        {/* Front face - white text */}\r\n        <motion.span\r\n          variants={frontVariants}\r\n          transition={transition}\r\n          style={{\r\n            gridArea: '1 / 1',\r\n            display: 'inline-flex',\r\n            alignItems: 'center',\r\n            justifyContent: 'center',\r\n            zIndex: 1,\r\n            color: '#ffffff',\r\n            transformStyle: 'preserve-3d',\r\n            backfaceVisibility: 'hidden',\r\n          }}\r\n        >\r\n          {children}\r\n        </motion.span>\r\n\r\n        {/* Back face - black text */}\r\n        <motion.span\r\n          variants={backVariants}\r\n          transition={transition}\r\n          style={{\r\n            gridArea: '1 / 1',\r\n            display: 'inline-flex',\r\n            alignItems: 'center',\r\n            justifyContent: 'center',\r\n            color: flipTextColor,\r\n            zIndex: 1,\r\n            transformStyle: 'preserve-3d',\r\n            backfaceVisibility: 'hidden',\r\n          }}\r\n        >\r\n          {flipContent}\r\n        </motion.span>\r\n\r\n        {/* Highlight - fades out on hover */}\r\n        <motion.div\r\n          className={cn(\r\n            \"absolute inset-0 size-full\",\r\n            \"rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]\",\r\n            \"transform-gpu transition-all duration-300 ease-in-out\",\r\n            \"group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]\",\r\n            \"group-active:shadow-[inset_0_-10px_10px_#ffffff3f]\"\r\n          )}\r\n          variants={{\r\n            initial: { opacity: 1 },\r\n            hover: { opacity: 0 }\r\n          }}\r\n          transition={transition}\r\n        />\r\n\r\n        {/* backdrop */}\r\n        <div\r\n          className={cn(\r\n            \"absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]\"\r\n          )}\r\n        />\r\n      </motion.button>\r\n    )\r\n  }\r\n)\r\n\r\nFlipButton.displayName = \"FlipButton\"\r\n\r\nexport { FlipButton, type FlipButtonProps }"
   }
 ],
     keywords: [],
@@ -381,28 +447,28 @@ export const index: Record<string, any> = {
     })(),
     command: '@foliokit/flip-button',
   },
-  "hello-world": {
-    name: "hello-world",
-    description: "Hello World Description",
+  "ping": {
+    name: "ping",
+    description: "Ping Description",
     type: "registry:component",
     dependencies: [],
     devDependencies: [],
     registryDependencies: [],
     files: [
   {
-    "path": "registry/foliokit/hello-world/index.tsx",
-    "type": "registry:ui",
+    "path": "registry/foliokit/ping/index.tsx",
+    "type": "registry:component",
     "target": "",
-    "content": "export function HelloWorld() {\r\n  return <h1 className=\"text-2xl font-bold\">Hello World</h1>\r\n}"
+    "content": "import React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\ninterface PingProps {\r\n  state: \"active\" | \"down\" | \"fixing\" | \"idle\";\r\n  color?: string;\r\n  label?: string;\r\n  className?: string;\r\n  size?: \"sm\" | \"md\" | \"lg\";\r\n  labelClassName?: string;\r\n}\r\n\r\nconst getStateColors = (state: PingProps[\"state\"]) => {\r\n  switch (state) {\r\n    case \"active\":\r\n      return { dot: \"bg-green-500\", ping: \"bg-green-300\" };\r\n    case \"down\":\r\n      return { dot: \"bg-red-500\", ping: \"bg-red-300\" };\r\n    case \"fixing\":\r\n      return { dot: \"bg-yellow-500\", ping: \"bg-yellow-300\" };\r\n    case \"idle\":\r\n    default:\r\n      return { dot: \"bg-slate-700\", ping: \"bg-slate-400\" };\r\n  }\r\n};\r\n\r\nconst getSizeClasses = (size: PingProps[\"size\"]) => {\r\n  switch (size) {\r\n    case \"sm\":\r\n      return { dot: \"h-2 w-2\", ping: \"h-2 w-2\" };\r\n    case \"lg\":\r\n      return { dot: \"h-4 w-4\", ping: \"h-4 w-4\" };\r\n    case \"md\":\r\n    default:\r\n      return { dot: \"h-3 w-3\", ping: \"h-3 w-3\" };\r\n  }\r\n};\r\n\r\nconst Ping: React.FC<PingProps> = ({\r\n  state = \"idle\",\r\n  color,\r\n  label,\r\n  className,\r\n  size = \"md\",\r\n  labelClassName\r\n}) => {\r\n  const shouldAnimate =\r\n    state === \"active\" || state === \"fixing\" || state === \"down\";\r\n  const colors = getStateColors(state);\r\n  const sizeClasses = getSizeClasses(size);\r\n\r\n  return (\r\n    <div className={cn(\"flex items-center gap-2\", className)}>\r\n      <div className=\"relative flex items-center\">\r\n        {shouldAnimate && (\r\n          <span\r\n            className={cn(\r\n              \"absolute inline-flex rounded-full opacity-75 animate-ping\",\r\n              sizeClasses.ping,\r\n              colors.ping\r\n            )}\r\n          />\r\n        )}\r\n        <span\r\n          className={cn(\r\n            \"relative inline-flex rounded-full\",\r\n            sizeClasses.dot,\r\n            colors.dot\r\n          )}\r\n        />\r\n      </div>\r\n      {label && (\r\n        <p\r\n          className={cn(\r\n            \"text-sm text-slate-700 dark:text-slate-300\",\r\n            labelClassName\r\n          )}\r\n        >\r\n          {label}\r\n        </p>\r\n      )}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Ping;"
   }
 ],
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
-        const mod = await import("@/registry/foliokit/hello-world/index.tsx");
+        const mod = await import("@/registry/foliokit/ping/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
-        ) || "hello-world";
+        ) || "ping";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -412,6 +478,6 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
-    command: '@foliokit/hello-world',
+    command: '@foliokit/ping',
   },
   }

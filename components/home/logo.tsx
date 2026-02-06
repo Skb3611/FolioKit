@@ -10,13 +10,13 @@ type IconProps = {
 
 const Logo = ({ size = "sm", text = true }: IconProps) => {
   return (
-    <div className="inline-flex items-center gap-2">
+    <div className="flex items-center gap-2">
       <div
         className={` ${size == "sm" ? "rounded-md p-1" : "rounded-lg p-2"} bg-foreground text-background`}
       >
         <CodeXml className={`size-${size === "sm" ? "5" : "10"}`} />
       </div>
-      {text && <span className="text-lg sm:text-xl">FolioKit</span>}
+      {text && <span className={`${size!=="sm"?"text-lg sm:text-xl":"text-base"}`}>FolioKit</span>}
     </div>
   );
 };

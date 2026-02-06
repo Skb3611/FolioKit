@@ -1,6 +1,4 @@
-import * as React from "react";
-import { OpenInV0Button } from "@/components/open-in-v0-button";
-import { HelloWorld } from "@/registry/foliokit/hello-world";
+
 // This page displays items from the custom registry.
 import Landing from "@/components/home/landing";
 import Footer from "@/components/home/footer";

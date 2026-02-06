@@ -18,52 +18,7 @@ export function getRegistryComponent(name: string) {
   return Index[name].component;
 }
 
-export async function getRegistryItem(name: string) {
-  const item = Index[name];
-
-  if (!item) {
-    return null;
-  }
-
-  // Convert all file paths to object.
-  // TODO: remove when we migrate to new registry.
-  item.files = item.files.map((file: unknown) =>
-    typeof file === "string" ? { path: file } : file,
-  );
-
-  // Fail early before doing expensive file operations.
-  const result = registryItemSchema.safeParse(item);
-  if (!result.success) {
-    return null;
-  }
-
-  let files: typeof result.data.files = [];
-  for (const file of item.files) {
-    const content = await getFileContent(file);
-    const relativePath = path.relative(process.cwd(), file.path);
-
-    files.push({
-      ...file,
-      path: relativePath,
-      content,
-    });
-  }
-
-  // Fix file paths.
-  files = fixFilePaths(files as RegistryItemFile[]);
-
-  const parsed = registryItemSchema.safeParse({
-    ...result.data,
-    files,
-  });
-
-  if (!parsed.success) {
-    console.error(parsed.error.message);
-    return null;
-  }
-
-  return parsed.data;
-}
+export const getRegistryItem = async (name: string) => Index[name];
 
 async function getFileContent(file: RegistryItemFile) {
   const raw = await fs.readFile(file.path, "utf-8");

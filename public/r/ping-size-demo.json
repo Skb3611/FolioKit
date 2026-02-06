@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ping-size-demo",
+  "title": "Ping Size Demo",
+  "description": "A compact status indicator for real-time activity with different sizes",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/ping-size-demo/index.tsx",
+      "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col\">\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

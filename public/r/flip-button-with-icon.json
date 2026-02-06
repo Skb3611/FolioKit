@@ -12,8 +12,8 @@
   "files": [
     {
       "path": "registry/demo/flip-button-with-icon/index.tsx",
-      "content": "import { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\nimport { ArrowRight } from \"lucide-react\"\r\n\r\nconst FlipButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton\r\n        flipContent={\r\n          <span className=\"flex items-center gap-2\">\r\n            Go <ArrowRight size={16} />\r\n          </span>\r\n        }\r\n      >\r\n        <span className=\"flex items-center gap-2\">\r\n          Start <ArrowRight size={16} />\r\n        </span>\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonWithIcon\r\n",
-      "type": "registry:ui"
+      "content": "import { FlipButton } from \"@/components/foliokit/flip-button\"\r\nimport { ArrowRight } from \"lucide-react\"\r\n\r\nconst FlipButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton\r\n        flipContent={\r\n          <span className=\"flex items-center gap-2\">\r\n            Go <ArrowRight size={16} />\r\n          </span>\r\n        }\r\n      >\r\n        <span className=\"flex items-center gap-2\">\r\n          Start <ArrowRight size={16} />\r\n        </span>\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonWithIcon\r\n",
+      "type": "registry:component"
     }
   ],
   "type": "registry:component"
