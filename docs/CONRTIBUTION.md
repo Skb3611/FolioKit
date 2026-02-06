@@ -196,7 +196,7 @@ author: johndev
 
 </ShadcnTabs>
 
-## Usage
+### Usage
 
 ```tsx import { MyComponent } from "@/components/ui/my-component" ```
 
