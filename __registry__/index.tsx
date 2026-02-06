@@ -150,39 +150,6 @@ export const index: Record<string, any> = {
     })(),
     command: '@foliokit/flip-button-with-icon',
   },
-  "hello-world-demo": {
-    name: "hello-world-demo",
-    description: "Hello World Demo Description",
-    type: "registry:component",
-    dependencies: [],
-    devDependencies: [],
-    registryDependencies: [],
-    files: [
-  {
-    "path": "registry/demo/hello-world-demo/index.tsx",
-    "type": "registry:component",
-    "target": "",
-    "content": "import { HelloWorld } from '@/components/foliokit/hello-world'\r\n\r\nconst HelloWorldDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <HelloWorld/>\r\n      <div className=\"ml-4\">\r\n        <p className=\"text-lg font-bold\">Hello World</p>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default HelloWorldDemo"
-  }
-],
-    keywords: [],
-    component: (function() {
-      const LazyComp = React.lazy(async () => {
-        const mod = await import("@/registry/demo/hello-world-demo/index.tsx");
-        const exportName = Object.keys(mod).find(
-          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
-        ) || "hello-world-demo";
-        const Comp = mod.default || mod[exportName];
-        if (mod.animations) {
-          (LazyComp as any).animations = mod.animations;
-        }
-        return { default: Comp };
-      });
-      LazyComp.demoProps = {};
-      return LazyComp;
-    })(),
-    command: '@foliokit/hello-world-demo',
-  },
   "ping-demo": {
     name: "ping-demo",
     description: "A compact status indicator for real-time activity",
@@ -314,39 +281,6 @@ export const index: Record<string, any> = {
       return LazyComp;
     })(),
     command: '@foliokit/flip-button',
-  },
-  "hello-world": {
-    name: "hello-world",
-    description: "Hello World Description",
-    type: "registry:component",
-    dependencies: [],
-    devDependencies: [],
-    registryDependencies: [],
-    files: [
-  {
-    "path": "registry/foliokit/hello-world/index.tsx",
-    "type": "registry:component",
-    "target": "",
-    "content": "export function HelloWorld() {\r\n  return <h1 className=\"text-2xl font-bold\">Hello World</h1>\r\n}"
-  }
-],
-    keywords: [],
-    component: (function() {
-      const LazyComp = React.lazy(async () => {
-        const mod = await import("@/registry/foliokit/hello-world/index.tsx");
-        const exportName = Object.keys(mod).find(
-          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
-        ) || "hello-world";
-        const Comp = mod.default || mod[exportName];
-        if (mod.animations) {
-          (LazyComp as any).animations = mod.animations;
-        }
-        return { default: Comp };
-      });
-      LazyComp.demoProps = {};
-      return LazyComp;
-    })(),
-    command: '@foliokit/hello-world',
   },
   "ping": {
     name: "ping",

@@ -1,7 +1,6 @@
 // @ts-nocheck
-import * as __fd_glob_4 from "../content/docs/components/ping.mdx?collection=docs"
-import * as __fd_glob_3 from "../content/docs/components/index.mdx?collection=docs"
-import * as __fd_glob_2 from "../content/docs/components/hello-world.mdx?collection=docs"
+import * as __fd_glob_3 from "../content/docs/components/ping.mdx?collection=docs"
+import * as __fd_glob_2 from "../content/docs/components/index.mdx?collection=docs"
 import * as __fd_glob_1 from "../content/docs/components/flip-button.mdx?collection=docs"
 import * as __fd_glob_0 from "../content/docs/index.mdx?collection=docs"
 import { server } from 'fumadocs-mdx/runtime/server';
@@ -12,4 +11,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"index.mdx": __fd_glob_0, "components/flip-button.mdx": __fd_glob_1, "components/hello-world.mdx": __fd_glob_2, "components/index.mdx": __fd_glob_3, "components/ping.mdx": __fd_glob_4, });
+export const docs = await create.docs("docs", "content/docs", {}, {"index.mdx": __fd_glob_0, "components/flip-button.mdx": __fd_glob_1, "components/index.mdx": __fd_glob_2, "components/ping.mdx": __fd_glob_3, });
