@@ -106,7 +106,7 @@ This is what it should look like:
     {
       "path": "registry/foliokit/my-component/index.tsx",
       "type": "registry:component",
-      "target": "components/foliokit/my-component/index.tsx"
+      "target": "components/ui/foliokit/my-component.tsx"
     }
   ]
 }
