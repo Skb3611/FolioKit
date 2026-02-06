@@ -10,7 +10,8 @@
   "files": [
     {
       "path": "registry/foliokit/ping/index.tsx",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "component/ui/ping.tsx"
     }
   ]
 } 

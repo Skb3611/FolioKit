@@ -10,7 +10,8 @@
     "files": [
       {
         "path": "registry/foliokit/accordion/index.tsx",
-        "type": "registry:ui"
+        "type": "registry:component",
+        "target": "component/ui/accordion.tsx"
       }
     ]
   }
