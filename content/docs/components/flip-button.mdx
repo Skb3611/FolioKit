@@ -31,14 +31,12 @@ author: foliokit
 
 <Steps>
 
+<Step>Install the required animation dependency.</Step>
+```bash npm install motion ```
+
 <Step>Copy and paste the following code into your project.</Step>
 
 <ComponentSource name="flip-button" />
-
-<Step>Install the required animation dependency.</Step>
-```bash
-npm install motion
-```
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -49,16 +47,18 @@ npm install motion
 </ShadcnTabs>
 
 ### Usage
+
 ```tsx
-import { FlipButton } from "@/components/ui/flip-button"
+import { FlipButton } from "@/components/ui/flip-button";
 ```
+
 ```tsx
 export default function App() {
   return (
     <FlipButton flipContent="Kit!!" flipFrom="top">
       Folio
     </FlipButton>
-  )
+  );
 }
 ```
 
@@ -149,6 +149,4 @@ export default function App() {
 
 ## API Reference
 
-<Link href="https://motion.dev/docs/react">
-  Motion React API Reference
-</Link>
+<Link href="https://motion.dev/docs/react">Motion React API Reference</Link>
