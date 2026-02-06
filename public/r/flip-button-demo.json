@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/demo/flip-button-demo/index.tsx",
-      "content": "\"use client\"\r\nimport { FlipButton } from \"@/components/foliokit/foliokit/flip-button\"\r\n\r\nconst FlipButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton flipContent=\"Kit!!\">\r\n        Folio\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDemo\r\n",
+      "content": "\"use client\"\r\nimport { FlipButton } from \"@/components/foliokit/flip-button\"\r\n\r\nconst FlipButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n      <FlipButton flipContent=\"Kit!!\">\r\n        Folio\r\n      </FlipButton>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default FlipButtonDemo\r\n",
       "type": "registry:ui"
     }
   ],
