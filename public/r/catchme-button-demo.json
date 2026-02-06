@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catchme-button-demo",
+  "title": "Catchme Button demo",
+  "description": "Button that moves away from cursor when hovered",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/catchme-button-demo/index.tsx",
+      "content": "\"use client\"\r\nimport { Button }  from \"@/components/foliokit/catchme-button\"\r\n\r\nconst CatchButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n    <Button evade variant=\"default\" size=\"lg\">\r\n    Catch me! 🏃‍♂️\r\n  </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CatchButtonDemo\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

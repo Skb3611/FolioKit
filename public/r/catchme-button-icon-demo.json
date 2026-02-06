@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catchme-button-icon-demo",
+  "title": "Catchme Button with icon demo",
+  "description": "Button that moves away from cursor when hovered",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/catchme-button-icon-demo/index.tsx",
+      "content": "// registry/demo/evade-button-with-icon/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\nimport { Heart, Star, Zap, Rocket } from \"lucide-react\"\r\n\r\nconst EvadeButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade variant=\"default\">\r\n        <Heart />\r\n        Like\r\n      </Button>\r\n      <Button evade variant=\"secondary\">\r\n        <Star />\r\n        Favorite\r\n      </Button>\r\n      <Button evade variant=\"outline\">\r\n        <Zap />\r\n        Quick Action\r\n      </Button>\r\n      <Button evade variant=\"destructive\">\r\n        <Rocket />\r\n        Launch\r\n      </Button>\r\n      <Button evade size=\"icon\" variant=\"outline\">\r\n        <Heart />\r\n      </Button>\r\n      <Button evade size=\"icon-lg\" variant=\"default\">\r\n        <Star />\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonWithIcon",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

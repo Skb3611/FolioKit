@@ -1,0 +1,139 @@
+---
+title: Catchme Button
+date: 2026-02-05
+description: An interactive button component that evades the cursor with smooth animations and physics-based movement
+author: foliokit
+---
+
+<ComponentPreview name="catchme-button-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/catchme-button.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/catchme-button.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/catchme-button.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/catchme-button.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="evade-button" />
+
+<Step>Install the required dependencies.</Step>
+```bash
+npm install class-variance-authority @radix-ui/react-slot
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+## Usage
+```tsx
+import { Button } from "@/components/ui/catchme-button"
+```
+```tsx
+export default function App() {
+  return (
+    <Button evade evadeDistance={180} evadeThreshold={150}>
+      Try to Click Me!
+    </Button>
+  )
+}
+```
+
+## Examples
+
+### Default Evade Button
+
+<ComponentPreview name="catchme-button-demo" />
+
+### Button with icon
+
+<ComponentPreview name="catchme-button-icon-demo" />
+
+### Button size 
+
+<ComponentPreview name="catchme-button-size-demo" />
+
+### Button Variant
+
+<ComponentPreview name="catchme-button-variant-demo" />
+
+## Props
+
+<TypeTable
+  type={{
+    variant: {
+      description: "The visual style variant of the button",
+      type: '"default" | "destructive" | "outline" | "secondary" | "ghost" | "link"',
+      default: '"default"',
+    },
+    size: {
+      description: "The size of the button",
+      type: '"default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg"',
+      default: '"default"',
+    },
+    evade: {
+      description: "Enable evasion behavior when cursor approaches",
+      type: "boolean",
+      default: "false",
+    },
+    evadeDistance: {
+      description: "Maximum distance the button will move away from cursor",
+      type: "number",
+      default: "180",
+    },
+    evadeThreshold: {
+      description: "Distance threshold at which evasion starts",
+      type: "number",
+      default: "150",
+    },
+    boundaryWidth: {
+      description: "Maximum horizontal movement boundary",
+      type: "number",
+      default: "400",
+    },
+    boundaryHeight: {
+      description: "Maximum vertical movement boundary",
+      type: "number",
+      default: "300",
+    },
+    asChild: {
+      description: "Merge props onto the child element",
+      type: "boolean",
+      default: "false",
+    },
+    className: {
+      description: "Additional CSS or Tailwind classes",
+      type: "string",
+      default: "undefined",
+    },
+  }}
+/>
+
+## API Reference
+
+<Link href="https://www.radix-ui.com/primitives/docs/utilities/slot">
+  Radix UI Slot API Reference
+</Link>
