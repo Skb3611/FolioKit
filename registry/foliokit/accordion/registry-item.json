@@ -11,7 +11,7 @@
       {
         "path": "registry/foliokit/accordion/index.tsx",
         "type": "registry:component",
-        "target": "component/ui/accordion.tsx"
+        "target": "components/ui/foliokit/accordion.tsx"
       }
     ]
   }
