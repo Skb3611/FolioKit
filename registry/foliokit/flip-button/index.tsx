@@ -90,7 +90,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
       FlipColor = "#ffffff",
       FlipSize = "0.05em",
       FlipDuration = "3s",
-      borderRadius = "100px",
+      borderRadius = "20px",
       background = "rgba(0, 0, 0, 1)",
       className,
       children,
@@ -227,7 +227,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           transformStyle: 'preserve-3d',
         }}
         className={cn(
-          "group relative z-0 cursor-pointer overflow-hidden rounded-lg border border-white/10 px-6 py-3 whitespace-nowrap [background:var(--bg)]",
+          "group relative z-0 cursor-pointer overflow-hidden rounded-lg border border-white/10 px-10 py-2 whitespace-nowrap [background:var(--bg)]",
           "transform-gpu",
           className
         )}
