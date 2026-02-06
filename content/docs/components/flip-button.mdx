@@ -1,0 +1,154 @@
+---
+title: Flip Button
+date: 2026-02-05
+description: An animated button component with 3D flip effects and interactive hover states
+author: foliokit
+---
+
+<ComponentPreview name="flip-button-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/flip-button.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/flip-button.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/flip-button.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/flip-button.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="flip-button" />
+
+<Step>Install the required animation dependency.</Step>
+```bash
+npm install motion
+```
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+## Usage
+```tsx
+import { FlipButton } from "@/components/ui/flip-button"
+```
+```tsx
+export default function App() {
+  return (
+    <FlipButton flipContent="Kit!!" flipFrom="top">
+      Folio
+    </FlipButton>
+  )
+}
+```
+
+## Examples
+
+### Default Flip Button
+
+<ComponentPreview name="flip-button-demo" />
+
+### Flip Direction
+
+<ComponentPreview name="flip-button-directions" />
+
+### Custom Colors
+
+<ComponentPreview name="flip-button-colors" />
+
+### Flip Button with Icon
+
+<ComponentPreview name="flip-button-with-icon" />
+
+## Props
+
+<TypeTable
+  type={{
+    FlipColor: {
+      description: "Color used for the animated spark or glow effect",
+      type: "string",
+      default: '"#ffffff"',
+    },
+    FlipSize: {
+      description: "Thickness of the flip cut or glow spread",
+      type: "string",
+      default: '"0.05em"',
+    },
+    FlipDuration: {
+      description: "Duration of the flip animation",
+      type: "string",
+      default: '"3s"',
+    },
+    borderRadius: {
+      description: "Border radius of the button",
+      type: "string",
+      default: '"100px"',
+    },
+    background: {
+      description: "Base background color of the button",
+      type: "string",
+      default: '"rgba(0, 0, 0, 1)"',
+    },
+    flipBackground: {
+      description: "Background color displayed after the flip",
+      type: "string",
+      default: '"rgba(255, 255, 255, 1)"',
+    },
+    flipTextColor: {
+      description: "Text color of the back face after flip",
+      type: "string",
+      default: '"#000000"',
+    },
+    flipFrom: {
+      description: "Direction from which the flip animation starts",
+      type: '"top" | "bottom" | "left" | "right"',
+      default: '"top"',
+    },
+    flipContent: {
+      description: "Content rendered on the back face of the button",
+      type: "React.ReactNode",
+      default: "undefined",
+    },
+    tapScale: {
+      description: "Scale applied when the button is pressed",
+      type: "number",
+      default: "0.95",
+    },
+    className: {
+      description: "Additional CSS or Tailwind classes",
+      type: "string",
+      default: "undefined",
+    },
+    style: {
+      description: "Inline styles applied to the button",
+      type: "React.CSSProperties",
+      default: "undefined",
+    },
+  }}
+/>
+
+## API Reference
+
+<Link href="https://motion.dev/docs/react">
+  Motion React API Reference
+</Link>

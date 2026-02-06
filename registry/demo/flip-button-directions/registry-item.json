@@ -1,0 +1,17 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "flip-button-directions",
+    "type": "registry:component",
+    "title": "Flip Button Directions",
+    "description": "Flip button examples showing all flip directions",
+    "dependencies": ["motion"],
+    "registryDependencies": [],
+    "devDependencies": [],
+    "files": [
+      {
+        "path": "registry/demo/flip-button-directions/index.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  }
+  
