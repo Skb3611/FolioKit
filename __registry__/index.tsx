@@ -163,6 +163,19 @@ export const index: Record<string, any> = {
     "type": "registry:component",
     "target": "",
     "content": "\"use client\"\r\nimport { Button }  from \"@/components/foliokit/catchme-button\"\r\n\r\nconst CatchButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n    <Button evade variant=\"default\" size=\"lg\">\r\n    Catch me! 🏃‍♂️\r\n  </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CatchButtonDemo"
+  "animated-scroll-section-demo": {
+    name: "animated-scroll-section-demo",
+    description: "Demonstrating the use of the AnimatedScrollSection component.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: ["@magicui/safari"],
+    files: [
+  {
+    "path": "registry/demo/animated-scroll-section-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import React from \"react\";\r\nimport AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section\r\n      </h1>\r\n      <AnimatedScrollSection videoSrc=\"https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4\" />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;"
   }
 ],
     keywords: [],
@@ -172,6 +185,10 @@ export const index: Record<string, any> = {
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
         ) || "catchme-button-demo";
+        const mod = await import("@/registry/demo/animated-scroll-section-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "animated-scroll-section-demo";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -196,6 +213,21 @@ export const index: Record<string, any> = {
     "type": "registry:component",
     "target": "",
     "content": "// registry/demo/evade-button-with-icon/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\nimport { Heart, Star, Zap, Rocket } from \"lucide-react\"\r\n\r\nconst EvadeButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade variant=\"default\">\r\n        <Heart />\r\n        Like\r\n      </Button>\r\n      <Button evade variant=\"secondary\">\r\n        <Star />\r\n        Favorite\r\n      </Button>\r\n      <Button evade variant=\"outline\">\r\n        <Zap />\r\n        Quick Action\r\n      </Button>\r\n      <Button evade variant=\"destructive\">\r\n        <Rocket />\r\n        Launch\r\n      </Button>\r\n      <Button evade size=\"icon\" variant=\"outline\">\r\n        <Heart />\r\n      </Button>\r\n      <Button evade size=\"icon-lg\" variant=\"default\">\r\n        <Star />\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonWithIcon"
+    command: '@foliokit/animated-scroll-section-demo',
+  },
+  "animated-scroll-section-image-demo": {
+    name: "animated-scroll-section-image-demo",
+    description: "Demonstrating the use of the AnimatedScrollSection component with image.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: ["@magicui/safari"],
+    files: [
+  {
+    "path": "registry/demo/animated-scroll-section-image-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import React from \"react\";\r\nimport AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section with Image\r\n      </h1>\r\n      <AnimatedScrollSection imgSrc=\"https://gitfolio.in/assets/og.png\" />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;"
   }
 ],
     keywords: [],
@@ -205,6 +237,10 @@ export const index: Record<string, any> = {
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
         ) || "catchme-button-icon-demo";
+        const mod = await import("@/registry/demo/animated-scroll-section-image-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "animated-scroll-section-image-demo";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -229,6 +265,21 @@ export const index: Record<string, any> = {
     "type": "registry:component",
     "target": "",
     "content": "// registry/demo/evade-button-sizes/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\n\r\nconst EvadeButtonSizes = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade size=\"xs\" variant=\"outline\">\r\n        Extra Small\r\n      </Button>\r\n      <Button evade size=\"sm\" variant=\"outline\">\r\n        Small\r\n      </Button>\r\n      <Button evade size=\"default\" variant=\"outline\">\r\n        Default\r\n      </Button>\r\n      <Button evade size=\"lg\" variant=\"outline\">\r\n        Large\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonSizes"
+    command: '@foliokit/animated-scroll-section-image-demo',
+  },
+  "animated-scroll-section-mode-demo": {
+    name: "animated-scroll-section-mode-demo",
+    description: "Demonstrating the use of the AnimatedScrollSection component with mode.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: ["@magicui/safari"],
+    files: [
+  {
+    "path": "registry/demo/animated-scroll-section-mode-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section with Mode & URL\r\n      </h1>\r\n      <AnimatedScrollSection\r\n        url=\"https://gitfolio.in/\"\r\n        browserMode=\"default\"\r\n        videoSrc=\"https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4\"\r\n      />\r\n      \r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;"
   }
 ],
     keywords: [],
@@ -238,6 +289,10 @@ export const index: Record<string, any> = {
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
         ) || "catchme-button-size-demo";
+        const mod = await import("@/registry/demo/animated-scroll-section-mode-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "animated-scroll-section-mode-demo";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -262,6 +317,21 @@ export const index: Record<string, any> = {
     "type": "registry:component",
     "target": "",
     "content": "// registry/demo/evade-button-variants/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\n\r\nconst EvadeButtonVariants = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade variant=\"default\">\r\n        Default\r\n      </Button>\r\n      <Button evade variant=\"destructive\">\r\n        Destructive\r\n      </Button>\r\n      <Button evade variant=\"outline\">\r\n        Outline\r\n      </Button>\r\n      <Button evade variant=\"secondary\">\r\n        Secondary\r\n      </Button>\r\n      <Button evade variant=\"ghost\">\r\n        Ghost\r\n      </Button>\r\n      <Button evade variant=\"link\">\r\n        Link\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonVariants"
+    command: '@foliokit/animated-scroll-section-mode-demo',
+  },
+  "animated-scroll-section-transform-factor-demo": {
+    name: "animated-scroll-section-transform-factor-demo",
+    description: "Demonstrating the use of the AnimatedScrollSection component with transform factor.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: ["@magicui/safari"],
+    files: [
+  {
+    "path": "registry/demo/animated-scroll-section-transform-factor-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section with Transform Factors\r\n      </h1>\r\n      <AnimatedScrollSection\r\n        url=\"https://gitfolio.in/\"\r\n        videoSrc=\"https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4\"\r\n        scaleRange={[0.5, 1]}\r\n        rotateXRange={[20, 1]}\r\n        translateYRange={[0, 200]}\r\n      />\r\n      \r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;"
   }
 ],
     keywords: [],
@@ -271,6 +341,10 @@ export const index: Record<string, any> = {
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
         ) || "catchme-button-variant-demo";
+        const mod = await import("@/registry/demo/animated-scroll-section-transform-factor-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "animated-scroll-section-transform-factor-demo";
         const Comp = mod.default || mod[exportName];
         if (mod.animations) {
           (LazyComp as any).animations = mod.animations;
@@ -281,6 +355,7 @@ export const index: Record<string, any> = {
       return LazyComp;
     })(),
     command: '@foliokit/catchme-button-variant-demo',
+    command: '@foliokit/animated-scroll-section-transform-factor-demo',
   },
   "flip-button-colors": {
     name: "flip-button-colors",
@@ -545,6 +620,45 @@ export const index: Record<string, any> = {
       return LazyComp;
     })(),
     command: '@foliokit/accordion',
+  },
+  "animated-scroll-section": {
+    name: "animated-scroll-section",
+    description: "A Browser mockup animated over scroll.",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: ["@magicui/safari"],
+    files: [
+  {
+    "path": "registry/foliokit/animated-scroll-section/index.tsx",
+    "type": "registry:component",
+    "target": "components/ui/foliokit/animated-scroll-section.tsx",
+    "content": "\"use client\";\r\nimport { useRef } from \"react\";\r\nimport { motion, useScroll, useTransform } from \"motion/react\";\r\nimport { Safari } from \"@/components/ui/safari\";\r\nimport { useIsMobile } from \"@/hooks/use-mobile\";\r\ntype AnimatedScrollSectionProps = {\r\n  imgSrc?: string;\r\n  videoSrc?: string;\r\n  browserMode?: \"default\" | \"simple\";\r\n  url?: string;\r\n  scaleRange?: [number, number];\r\n  rotateXRange?: [number, number];\r\n  translateYRange?: [number, number];\r\n};\r\nconst AnimatedScrollSection = ({\r\n  imgSrc,\r\n  videoSrc,\r\n  browserMode = \"simple\",\r\n  url,\r\n  scaleRange,\r\n  rotateXRange,\r\n  translateYRange,\r\n}: AnimatedScrollSectionProps) => {\r\n  const isMobile = useIsMobile();\r\n  const ref = useRef<HTMLDivElement>(null);\r\n  const { scrollYProgress } = useScroll({\r\n    target: ref,\r\n    offset: [\"start end\", \"end start\"],\r\n  });\r\n  const scaleValues = scaleRange ?? (isMobile ? [0.8, 1] : [0.7, 1.035]);\r\n\r\n  const rotateXValues = rotateXRange ?? (isMobile ? [20, 0] : [12, 0]);\r\n\r\n  const translateYValues = translateYRange ?? (isMobile ? [0, 100] : [0, 200]);\r\n\r\n  const rotateX = useTransform(scrollYProgress, [0, 0.5], rotateXValues);\r\n\r\n  const scale = useTransform(scrollYProgress, [0, 0.2], scaleValues);\r\n\r\n  const translateY = useTransform(scrollYProgress, [0, 0.7], translateYValues);\r\n\r\n  return (\r\n    <motion.div\r\n      initial={{\r\n        opacity: 0,\r\n        y: 20,\r\n        filter: \"blur(5px)\",\r\n      }}\r\n      animate={{\r\n        opacity: 1,\r\n        y: 0,\r\n        filter: \"blur(0px)\",\r\n      }}\r\n      transition={{\r\n        duration: 0.3,\r\n        delay: 0.1,\r\n      }}\r\n      ref={ref}\r\n      className=\"[perspective:500px] [transform-style:preserve-3d] w-[80%] -mt-28\"\r\n    >\r\n      <motion.div\r\n        style={{\r\n          rotateX,\r\n          scale,\r\n          translateY,\r\n        }}\r\n        className=\"relative md:rounded-xl  z-20 \"\r\n      >\r\n        {imgSrc ? (\r\n          <Safari\r\n            url={url}\r\n            mode={browserMode}\r\n            imageSrc={imgSrc}\r\n            className=\"size-full rounded-b-sm md:rounded-b-xl max-w-full md:max-w-6xl\"\r\n          />\r\n        ) : (\r\n          <Safari\r\n            url={url}\r\n            mode={browserMode}\r\n            videoSrc={videoSrc}\r\n            className=\"size-full rounded-b-sm md:rounded-b-xl max-w-full md:max-w-6xl\"\r\n          />\r\n        )}\r\n      </motion.div>\r\n    </motion.div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSection;"
+  },
+  {
+    "path": "registry/foliokit/animated-scroll-section/hooks/use-mobile.ts",
+    "type": "registry:hook",
+    "target": "hooks/use-mobile.ts",
+    "content": ""
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/foliokit/animated-scroll-section/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "animated-scroll-section";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/animated-scroll-section',
   },
   "flip-button": {
     name: "flip-button",
