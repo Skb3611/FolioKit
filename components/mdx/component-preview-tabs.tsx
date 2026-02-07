@@ -87,7 +87,7 @@ export function ComponentPreviewTabs({
         <div
           data-slot="code"
           data-active={tab === "code"}
-          className="absolute inset-0 hidden overflow-hidden rounded-md data-[active=true]:block **:[figure]:!m-0 **:[figure]:h-full **:[pre]:h-full **:[pre]:max-h-full"
+          className="absolute inset-0 hidden overflow-hidden rounded-md data-[active=true]:block **:[figure]:!m-0 **:[figure]:h-full **:[pre]:h-full **:[pre]:max-h-full h-full bg-fd-background border-fd-border"
         >
           {source}
         </div>

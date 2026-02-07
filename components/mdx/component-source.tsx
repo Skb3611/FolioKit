@@ -45,7 +45,7 @@ export async function ComponentSource({
     return (
       <DynamicCodeBlock
         codeblock={{
-          className: "h-full border border-fd-border",
+          className: "border-none flex flex-col",
           "data-line-numbers": true,
           title: titleForCodeBlock,
           icon: getIconForLanguageExtension(lang),
