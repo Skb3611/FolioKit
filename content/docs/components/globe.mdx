@@ -1,0 +1,103 @@
+---
+title: Interactive Globe
+date: 2026-02-07
+description: An auto-rotating,interactive globe made on top of Cobe.
+author: foliokit
+---
+
+<ComponentPreview name="globe-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/globe.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/globe.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/globe.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/globe.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+<CodeBlockCommand
+  __npm__="npm install cobe"
+  __pnpm__="pnpm add cobe"
+  __yarn__="yarn add cobe"
+  __bun__="bun add cobe"
+/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="globe" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+### Usage
+
+```tsx
+import { Globe } from "@/components/foliokit/globe";
+```
+
+```tsx
+<Globe />
+```
+
+## Examples
+
+### Light Mode
+
+Use `mode` to change the globe theme to `dark` | `light`.
+
+<ComponentPreview name={"globe-light-demo"} />
+## Props
+
+<TypeTable
+  type={{
+    className: {
+      description: "Tailwind classes for component.",
+      type: "string",
+    },
+    config: {
+      type: "CobeConfig",
+      description:
+        "The configuration options for the globe. Refer docs bellow.",
+      default: "GLOBE_CONFIG",
+    },
+    mode: {
+      description: "Dark & Light mode for globe.",
+      type: "dark | light",
+      default: "dark",
+    },
+    markers: {
+      description: "Location Pins on the map.",
+      type: "Markers[]",
+      default: "Random Pins generated.",
+    },
+  }}
+/>
+
+## API Reference
+
+<Link href={"https://cobe.vercel.app/docs/api"}>Cobe Docs</Link>
+
+---

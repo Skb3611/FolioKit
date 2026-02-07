@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "globe-light-demo",
+  "title": "Globe Demo",
+  "description": "An auto-rotating,interactive light globe made on top of Cobe.",
+  "dependencies": [
+    "cobe"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/globe-light-demo/index.tsx",
+      "content": "import { Globe } from \"@/components/foliokit/globe\";\n\nexport function GlobeDemo() {\n  return (\n    <div className=\"bg-background relative flex size-2/3 max-h-[400px] aspect-square items-center justify-center overflow-hidden rounded-lg border px-40 pt-8 pb-40 md:pb-60\">\n      <span className=\" text-5xl text-center font-semibold\">\n        Interactive Globe\n      </span>\n      <Globe className=\"top-[50%]\" mode=\"light\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/globe-light-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

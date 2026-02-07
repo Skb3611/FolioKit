@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "globe",
+  "title": "Globe",
+  "description": "An auto-rotating,interactive globe made on top of Cobe.",
+  "dependencies": [
+    "cobe"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/foliokit/globe/index.tsx",
+      "content": "\"use client\";\n\nimport { useEffect, useRef } from \"react\";\nimport createGlobe, { COBEOptions, Marker } from \"cobe\";\nimport { useMotionValue, useSpring } from \"motion/react\";\n\nimport { cn } from \"@/lib/utils\";\n\ntype GlobeProps = {\n  className?: string;\n  config?: COBEOptions;\n  mode?: \"dark\" | \"light\";\n  markers?: Marker[];\n};\nconst MOVEMENT_DAMPING = 1400;\n\nconst generateRandomMarkers = (count = 10): Marker[] => {\n  return Array.from({ length: count }, () => {\n    const lat = Math.asin(Math.random() * 2 - 1) * (180 / Math.PI);\n    const lng = Math.random() * 360 - 180;\n\n    return {\n      location: [lat, lng],\n      size: Number((Math.random() * 0.07 + 0.03).toFixed(2)),\n    };\n  });\n};\n\nconst GLOBE_CONFIG: COBEOptions = {\n  width: 800,\n  height: 800,\n  onRender: () => {},\n  devicePixelRatio: 2,\n  phi: 0,\n  theta: 0.3,\n  dark: 0,\n  diffuse: 0.4,\n  mapSamples: 16000,\n  mapBrightness: 1.2,\n  baseColor: [1, 1, 1],\n  markerColor: [251 / 255, 100 / 255, 21 / 255],\n  glowColor: [1, 1, 1],\n  markers: generateRandomMarkers(10),\n};\n\nexport function Globe({\n  className,\n  config = GLOBE_CONFIG,\n  mode = \"dark\",\n  markers = generateRandomMarkers(10),\n}: GlobeProps) {\n  let phi = 0;\n  let width = 0;\n  const canvasRef = useRef<HTMLCanvasElement>(null);\n  const pointerInteracting = useRef<number | null>(null);\n  const pointerInteractionMovement = useRef(0);\n\n  const r = useMotionValue(0);\n  const rs = useSpring(r, {\n    mass: 1,\n    damping: 30,\n    stiffness: 100,\n  });\n\n  const updatePointerInteraction = (value: number | null) => {\n    pointerInteracting.current = value;\n    if (canvasRef.current) {\n      canvasRef.current.style.cursor = value !== null ? \"grabbing\" : \"grab\";\n    }\n  };\n\n  const updateMovement = (clientX: number) => {\n    if (pointerInteracting.current !== null) {\n      const delta = clientX - pointerInteracting.current;\n      pointerInteractionMovement.current = delta;\n      r.set(r.get() + delta / MOVEMENT_DAMPING);\n    }\n  };\n\n  useEffect(() => {\n    const onResize = () => {\n      if (canvasRef.current) {\n        width = canvasRef.current.offsetWidth;\n      }\n    };\n\n    window.addEventListener(\"resize\", onResize);\n    onResize();\n\n    const globe = createGlobe(canvasRef.current!, {\n      ...config,\n      dark: mode === \"dark\" ? 1 : 0,\n      markers,\n      width: width * 2,\n      height: width * 2,\n      onRender: (state) => {\n        if (!pointerInteracting.current) phi += 0.005;\n        state.phi = phi + rs.get();\n        state.width = width * 2;\n        state.height = width * 2;\n      },\n    });\n\n    setTimeout(() => (canvasRef.current!.style.opacity = \"1\"), 0);\n    return () => {\n      globe.destroy();\n      window.removeEventListener(\"resize\", onResize);\n    };\n  }, [rs, config]);\n\n  return (\n    <div\n      className={cn(\n        \"absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]\",\n        className,\n      )}\n    >\n      <canvas\n        className={cn(\n          \"size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]\",\n        )}\n        ref={canvasRef}\n        onPointerDown={(e) => {\n          pointerInteracting.current = e.clientX;\n          updatePointerInteraction(e.clientX);\n        }}\n        onPointerUp={() => updatePointerInteraction(null)}\n        onPointerOut={() => updatePointerInteraction(null)}\n        onMouseMove={(e) => updateMovement(e.clientX)}\n        onTouchMove={(e) =>\n          e.touches[0] && updateMovement(e.touches[0].clientX)\n        }\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/globe.tsx"
+    }
+  ],
+  "type": "registry:component"
+}
