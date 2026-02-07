@@ -32,7 +32,13 @@ author: foliokit
 <Steps>
 
 <Step>Install the required animation dependency.</Step>
-```bash npm install motion ```
+
+<CodeBlockCommand
+  __npm__="npm install motion "
+  __pnpm__="pnpm add motion"
+  __yarn__="yarn add motion"
+  __bun__="bunx add motion"
+/>
 
 <Step>Copy and paste the following code into your project.</Step>
 
@@ -53,13 +59,9 @@ import { FlipButton } from "@/components/ui/flip-button";
 ```
 
 ```tsx
-export default function App() {
-  return (
-    <FlipButton flipContent="Kit!!" flipFrom="top">
-      Folio
-    </FlipButton>
-  );
-}
+<FlipButton flipContent="Kit!!" flipFrom="top">
+  Folio
+</FlipButton>
 ```
 
 ## Examples
@@ -150,3 +152,5 @@ export default function App() {
 ## API Reference
 
 <Link href="https://motion.dev/docs/react">Motion React API Reference</Link>
+
+---

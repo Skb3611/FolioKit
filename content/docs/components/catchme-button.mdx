@@ -31,14 +31,17 @@ author: foliokit
 
 <Steps>
 
+<Step>Install the required dependencies.</Step>
+
+<CodeBlockCommand
+  __npm__="npm install class-variance-authority @radix-ui/react-slot"
+  __pnpm__="pnpm add class-variance-authority @radix-ui/react-slot"
+  __yarn__="yarn add class-variance-authority @radix-ui/react-slot"
+  __bun__="bun add class-variance-authority @radix-ui/react-slot"
+/>
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="evade-button" />
-
-<Step>Install the required dependencies.</Step>
-```bash
-npm install class-variance-authority @radix-ui/react-slot
-```
+<ComponentSource name="catchme-button" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -49,17 +52,15 @@ npm install class-variance-authority @radix-ui/react-slot
 </ShadcnTabs>
 
 ## Usage
+
 ```tsx
-import { Button } from "@/components/ui/catchme-button"
+import { Button } from "@/components/ui/catchme-button";
 ```
+
 ```tsx
-export default function App() {
-  return (
-    <Button evade evadeDistance={180} evadeThreshold={150}>
-      Try to Click Me!
-    </Button>
-  )
-}
+<Button evade evadeDistance={180} evadeThreshold={150}>
+  Try to Click Me!
+</Button>
 ```
 
 ## Examples
@@ -72,7 +73,7 @@ export default function App() {
 
 <ComponentPreview name="catchme-button-icon-demo" />
 
-### Button size 
+### Button size
 
 <ComponentPreview name="catchme-button-size-demo" />
 
@@ -137,3 +138,5 @@ export default function App() {
 <Link href="https://www.radix-ui.com/primitives/docs/utilities/slot">
   Radix UI Slot API Reference
 </Link>
+
+---
