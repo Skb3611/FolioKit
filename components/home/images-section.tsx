@@ -3,8 +3,8 @@ import React from "react";
 
 const ImageSection = () => {
   return (
-    <div className="relative min-h-screen w-full perspective-distant translate-x-10">
-      <div className="absolute -bottom-35 -left-50 w-screen h-[400px] mx-auto z-20 mask-t-from-[40%] bg-background"></div>
+    <div className="relative min-h-screen w-full perspective-distant translate-x-15 mb-20">
+      <div className="absolute -bottom-40 -left-50 w-screen h-[500px] mx-auto z-20 mask-t-from-[40%] bg-background"></div>
       <div className="absolute perspective-1000 rotate-x-10 rotate-y-20 -rotate-z-12 translate-y-20">
         <Image
           className="rounded-lg aspect-video border mask-r-from-[90%] mask-b-from-[50%]"

@@ -11,8 +11,8 @@ import StackSection from "./stack-section";
 
 const Hero = () => {
   return (
-    <section className="py-10 space-y-5 ">
-      <AnimatedBadge>Introducing FolioKit </AnimatedBadge>
+    <section className="py-20 space-y-5 ">
+      {/* <AnimatedBadge>Introducing FolioKit </AnimatedBadge> */}
       <div className="flex flex-col justify-center w-full items-center gap-1">
         <Logo size="md" text={false} />
         {/* <span className="text-3xl font-semibold">FolioKit</span> */}
