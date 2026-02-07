@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "format:registry": "prettier --write registry",
-    "format:docs":"prettier --write content",
+    "format:docs": "prettier --write content",
     "start": "next start",
     "lint": "next lint",
     "registry:build": "npx tsx ./scripts/build.mts && shadcn build",
@@ -24,6 +24,7 @@
     "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cobe": "^0.6.5",
     "fumadocs-core": "^16.5.0",
     "fumadocs-mdx": "^14.2.6",
     "fumadocs-ui": "^16.5.0",

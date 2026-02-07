@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "globe",
+  "type": "registry:component",
+  "title": "Globe",
+  "description": "An auto-rotating,interactive globe made on top of Cobe.",
+  "dependencies": ["cobe"],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/foliokit/globe/index.tsx",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/globe.tsx"
+    }
+  ]
+}
