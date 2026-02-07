@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catchme-button-size-demo",
+  "title": "Catchme Button size demo",
+  "description": "Button that moves away from cursor when hovered",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/catchme-button-size-demo/index.tsx",
+      "content": "// registry/demo/evade-button-sizes/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\n\r\nconst EvadeButtonSizes = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade size=\"xs\" variant=\"outline\">\r\n        Extra Small\r\n      </Button>\r\n      <Button evade size=\"sm\" variant=\"outline\">\r\n        Small\r\n      </Button>\r\n      <Button evade size=\"default\" variant=\"outline\">\r\n        Default\r\n      </Button>\r\n      <Button evade size=\"lg\" variant=\"outline\">\r\n        Large\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonSizes",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -15,7 +15,9 @@ interface RegistryItemFile {
 }
 
 export function getRegistryComponent(name: string) {
-  return Index[name].component;
+  console.log(name)
+  return Index[name].component
+
 }
 
 export const getRegistryItem = async (name: string) => Index[name];

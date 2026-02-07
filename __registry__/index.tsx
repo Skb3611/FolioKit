@@ -150,6 +150,19 @@ export const index: Record<string, any> = {
     })(),
     command: '@foliokit/accordion-single',
   },
+  "catchme-button-demo": {
+    name: "catchme-button-demo",
+    description: "Button that moves away from cursor when hovered",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/catchme-button-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "\"use client\"\r\nimport { Button }  from \"@/components/foliokit/catchme-button\"\r\n\r\nconst CatchButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n    <Button evade variant=\"default\" size=\"lg\">\r\n    Catch me! 🏃‍♂️\r\n  </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CatchButtonDemo"
   "animated-scroll-section-demo": {
     name: "animated-scroll-section-demo",
     description: "Demonstrating the use of the AnimatedScrollSection component.",
@@ -168,6 +181,10 @@ export const index: Record<string, any> = {
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/catchme-button-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "catchme-button-demo";
         const mod = await import("@/registry/demo/animated-scroll-section-demo/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
@@ -181,6 +198,21 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
+    command: '@foliokit/catchme-button-demo',
+  },
+  "catchme-button-icon-demo": {
+    name: "catchme-button-icon-demo",
+    description: "Button that moves away from cursor when hovered",
+    type: "registry:component",
+    dependencies: ["lucide-react"],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/catchme-button-icon-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "// registry/demo/evade-button-with-icon/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\nimport { Heart, Star, Zap, Rocket } from \"lucide-react\"\r\n\r\nconst EvadeButtonWithIcon = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade variant=\"default\">\r\n        <Heart />\r\n        Like\r\n      </Button>\r\n      <Button evade variant=\"secondary\">\r\n        <Star />\r\n        Favorite\r\n      </Button>\r\n      <Button evade variant=\"outline\">\r\n        <Zap />\r\n        Quick Action\r\n      </Button>\r\n      <Button evade variant=\"destructive\">\r\n        <Rocket />\r\n        Launch\r\n      </Button>\r\n      <Button evade size=\"icon\" variant=\"outline\">\r\n        <Heart />\r\n      </Button>\r\n      <Button evade size=\"icon-lg\" variant=\"default\">\r\n        <Star />\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonWithIcon"
     command: '@foliokit/animated-scroll-section-demo',
   },
   "animated-scroll-section-image-demo": {
@@ -201,6 +233,10 @@ export const index: Record<string, any> = {
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/catchme-button-icon-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "catchme-button-icon-demo";
         const mod = await import("@/registry/demo/animated-scroll-section-image-demo/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
@@ -214,6 +250,21 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
+    command: '@foliokit/catchme-button-icon-demo',
+  },
+  "catchme-button-size-demo": {
+    name: "catchme-button-size-demo",
+    description: "Button that moves away from cursor when hovered",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/catchme-button-size-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "// registry/demo/evade-button-sizes/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\n\r\nconst EvadeButtonSizes = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade size=\"xs\" variant=\"outline\">\r\n        Extra Small\r\n      </Button>\r\n      <Button evade size=\"sm\" variant=\"outline\">\r\n        Small\r\n      </Button>\r\n      <Button evade size=\"default\" variant=\"outline\">\r\n        Default\r\n      </Button>\r\n      <Button evade size=\"lg\" variant=\"outline\">\r\n        Large\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonSizes"
     command: '@foliokit/animated-scroll-section-image-demo',
   },
   "animated-scroll-section-mode-demo": {
@@ -234,6 +285,10 @@ export const index: Record<string, any> = {
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/catchme-button-size-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "catchme-button-size-demo";
         const mod = await import("@/registry/demo/animated-scroll-section-mode-demo/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
@@ -247,6 +302,21 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
+    command: '@foliokit/catchme-button-size-demo',
+  },
+  "catchme-button-variant-demo": {
+    name: "catchme-button-variant-demo",
+    description: "Button that moves away from cursor when hovered",
+    type: "registry:component",
+    dependencies: [],
+    devDependencies: [],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/catchme-button-variant-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "// registry/demo/evade-button-variants/index.tsx\r\n\"use client\"\r\nimport { Button } from \"@/components/foliokit/catchme-button\"\r\n\r\nconst EvadeButtonVariants = () => {\r\n  return (\r\n    <div className=\"flex flex-wrap items-center justify-center gap-4 min-h-[200px]\">\r\n      <Button evade variant=\"default\">\r\n        Default\r\n      </Button>\r\n      <Button evade variant=\"destructive\">\r\n        Destructive\r\n      </Button>\r\n      <Button evade variant=\"outline\">\r\n        Outline\r\n      </Button>\r\n      <Button evade variant=\"secondary\">\r\n        Secondary\r\n      </Button>\r\n      <Button evade variant=\"ghost\">\r\n        Ghost\r\n      </Button>\r\n      <Button evade variant=\"link\">\r\n        Link\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default EvadeButtonVariants"
     command: '@foliokit/animated-scroll-section-mode-demo',
   },
   "animated-scroll-section-transform-factor-demo": {
@@ -267,6 +337,10 @@ export const index: Record<string, any> = {
     keywords: [],
     component: (function() {
       const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/catchme-button-variant-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "catchme-button-variant-demo";
         const mod = await import("@/registry/demo/animated-scroll-section-transform-factor-demo/index.tsx");
         const exportName = Object.keys(mod).find(
           key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
@@ -280,6 +354,7 @@ export const index: Record<string, any> = {
       LazyComp.demoProps = {};
       return LazyComp;
     })(),
+    command: '@foliokit/catchme-button-variant-demo',
     command: '@foliokit/animated-scroll-section-transform-factor-demo',
   },
   "flip-button-colors": {
