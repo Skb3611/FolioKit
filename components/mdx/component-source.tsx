@@ -25,10 +25,12 @@ export async function ComponentSource({
   if (!name && !src) return null;
 
   let code: string | undefined;
+  let titleForCodeBlock: string | undefined;
 
   if (name) {
     const item = await getRegistryItem(name);
     code = item?.files?.[0]?.content;
+    titleForCodeBlock = item.name + "." + item.files?.[0]?.path.split(".")[1];
   }
 
   if (src) {
@@ -39,7 +41,19 @@ export async function ComponentSource({
 
   const lang = language ?? title?.split(".").pop() ?? "tsx";
 
-  if (!collapsible) return <DynamicCodeBlock lang={lang} code={code} />;
+  if (!collapsible)
+    return (
+      <DynamicCodeBlock
+        codeblock={{
+          className: "h-full border border-fd-border",
+          "data-line-numbers": true,
+          title: titleForCodeBlock,
+          icon: getIconForLanguageExtension(lang),
+        }}
+        lang={lang}
+        code={code}
+      />
+    );
 
   return (
     <CodeCollapsibleWrapper className={cn(className, "relative")}>
