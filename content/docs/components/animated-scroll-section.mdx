@@ -1,0 +1,124 @@
+---
+title: Animated Scroll Section
+date: 2026-02-07
+description: A Browser mockup animated over scroll.
+author: foliokit
+---
+
+<ComponentPreview name="animated-scroll-section-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/animated-scroll-section.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/animated-scroll-section.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/animated-scroll-section.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/animated-scroll-section.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Install the required dependencies.</Step>
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add @magicui/safari"
+  __pnpm__="pnpm dlx shadcn@latest @magicui/safari"
+  __yarn__="yarn shadcn@latest add @magicui/safari"
+  __bun__="bunx shadcn@latest add @magicui/safari"
+/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animated-scroll-section" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+### Usage
+
+```tsx
+import AnimatedScrollSection from "@/components/ui/animated-scroll-section";
+```
+
+```tsx
+<AnimatedScrollSection />
+```
+
+## Examples
+
+### Image
+
+Add image using `imgSrc` prop.
+
+<ComponentPreview name="animated-scroll-section-image-demo" />
+
+### Mode & URL
+
+Use the `browserMode` & `url` to change browser mode & add Url to the browser ( defalut ones work well).
+
+<ComponentPreview name="animated-scroll-section-mode-demo" />
+
+### Transform Factors
+
+Use `  scaleRange`,`rotateXRange`,`translateYRange` to control the animation of the browser.
+
+<ComponentPreview name="animated-scroll-section-transform-factor-demo" />
+
+## Props
+
+<TypeTable
+  type={{
+    imgSrc: {
+      description: "Image Url.",
+      type: "string",
+    },
+    videoSrc: {
+      description: "Video Url.",
+      type: "string",
+    },
+    browserMode: {
+      description: "Styling of the browser",
+      type: " default | simple",
+      default: "simple",
+    },
+    url: {
+      description: "Browser Url.",
+      type: "string",
+    },
+    scaleRange: {
+      description: "Scaling Range of the browser.",
+      type: "[ number , number ]",
+      default: "[0.7,1.035]",
+    },
+    rotateXRange: {
+      description: "X-Rotating Range of the browser.",
+      type: "[ number , number ]",
+      default: "[12,0]",
+    },
+    translateYRange: {
+      description: "Y-Translation Range of the browser.",
+      type: "[ number , number ]",
+      default: "[0,200]",
+    },
+  }}
+/>
+
+---
