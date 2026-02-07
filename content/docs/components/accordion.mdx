@@ -30,15 +30,17 @@ author: foliokit
 <ShadcnTabsContent value="manual">
 
 <Steps>
+<Step>Install the required dependencies.</Step>
+<CodeBlockCommand
+  __npm__="npm install @radix-ui/react-accordion motion lucide-react"
+  __pnpm__="pnpm add @radix-ui/react-accordion motion lucide-react"
+  __yarn__="yarn add @radix-ui/react-accordion motion lucide-react"
+  __bun__="bun add @radix-ui/react-accordion motion lucide-react"
+/>
 
 <Step>Copy and paste the following code into your project.</Step>
 
 <ComponentSource name="accordion" />
-
-<Step>Install the required dependencies.</Step>
-```bash
-npm install @radix-ui/react-accordion motion lucide-react
-```
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -49,27 +51,25 @@ npm install @radix-ui/react-accordion motion lucide-react
 </ShadcnTabs>
 
 ## Usage
+
 ```tsx
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 ```
+
 ```tsx
-export default function App() {
-  return (
-    <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  )
-}
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>  
 ```
 
 ## Examples
@@ -97,17 +97,20 @@ export default function App() {
 <TypeTable
   type={{
     type: {
-      description: "Determines whether one or multiple items can be opened at the same time",
+      description:
+        "Determines whether one or multiple items can be opened at the same time",
       type: '"single" | "multiple"',
       default: "undefined",
     },
     collapsible: {
-      description: "When type is 'single', allows closing content when clicking trigger of an open item",
+      description:
+        "When type is 'single', allows closing content when clicking trigger of an open item",
       type: "boolean",
       default: "false",
     },
     defaultValue: {
-      description: "The value of the item to expand when initially rendered (uncontrolled)",
+      description:
+        "The value of the item to expand when initially rendered (uncontrolled)",
       type: "string | string[]",
       default: "undefined",
     },
@@ -134,7 +137,8 @@ export default function App() {
       default: "undefined",
     },
     disabled: {
-      description: "When true, prevents the user from interacting with the item",
+      description:
+        "When true, prevents the user from interacting with the item",
       type: "boolean",
       default: "false",
     },
@@ -185,3 +189,5 @@ export default function App() {
 <Link href="https://www.radix-ui.com/primitives/docs/components/accordion">
   Radix UI Accordion API Reference
 </Link>
+
+---
