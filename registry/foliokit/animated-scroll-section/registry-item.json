@@ -1,21 +1,22 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "animated-scroll-section",
-    "type": "registry:component",
-    "title": "Animated Scroll Section",
-    "description": "A Browser mockup animated over scroll.",
-    "dependencies": [],
-    "registryDependencies": ["@magicui/safari"],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/foliokit/animated-scroll-section/index.tsx",
-        "type": "registry:component",
-        "target": "components/ui/foliokit/animated-scroll-section.tsx"
-      },{
-        "path": "registry/foliokit/animated-scroll-section/hooks/use-mobile.ts",
-        "type": "registry:hook",
-        "target": "hooks/use-mobile.ts"
-      }
-    ]
-  }
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-scroll-section",
+  "type": "registry:component",
+  "title": "Animated Scroll Section",
+  "description": "A Browser mockup animated over scroll.",
+  "dependencies": [],
+  "registryDependencies": ["@magicui/safari"],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/foliokit/animated-scroll-section/index.tsx",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/animated-scroll-section.tsx"
+    },
+    {
+      "path": "registry/foliokit/animated-scroll-section/hooks/use-mobile.ts",
+      "type": "registry:hook",
+      "target": "hooks/use-mobile.ts"
+    }
+  ]
+}

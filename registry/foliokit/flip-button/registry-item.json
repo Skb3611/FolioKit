@@ -1,17 +1,17 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "flip-button",
-    "type": "registry:component",
-    "title": "Flip Button",
-    "description": "Button that flips when Hovered",
-    "dependencies": ["motion"],
-    "registryDependencies": [],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/foliokit/flip-button/index.tsx",
-        "type": "registry:component",
-        "target": "components/ui/foliokit/flip-button.tsx"
-      }
-    ]
-  }
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-button",
+  "type": "registry:component",
+  "title": "Flip Button",
+  "description": "Button that flips when Hovered",
+  "dependencies": ["motion"],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/foliokit/flip-button/index.tsx",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/flip-button.tsx"
+    }
+  ]
+}

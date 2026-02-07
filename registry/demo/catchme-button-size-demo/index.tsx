@@ -1,6 +1,6 @@
 // registry/demo/evade-button-sizes/index.tsx
-"use client"
-import { Button } from "@/registry/foliokit/catchme-button"
+"use client";
+import { Button } from "@/registry/foliokit/catchme-button";
 
 const EvadeButtonSizes = () => {
   return (
@@ -18,7 +18,7 @@ const EvadeButtonSizes = () => {
         Large
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default EvadeButtonSizes
+export default EvadeButtonSizes;

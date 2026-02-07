@@ -1,17 +1,17 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "accordion",
-    "type": "registry:component",
-    "title": "Accordion",
-    "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
-    "dependencies": ["motion","lucide-react","@radix-ui/react-accordion"],
-    "registryDependencies": [],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/foliokit/accordion/index.tsx",
-        "type": "registry:component",
-        "target": "components/ui/foliokit/accordion.tsx"
-      }
-    ]
-  }
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion",
+  "type": "registry:component",
+  "title": "Accordion",
+  "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+  "dependencies": ["motion", "lucide-react", "@radix-ui/react-accordion"],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/foliokit/accordion/index.tsx",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/accordion.tsx"
+    }
+  ]
+}

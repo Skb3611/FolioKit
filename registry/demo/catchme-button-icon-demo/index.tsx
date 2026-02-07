@@ -1,7 +1,7 @@
 // registry/demo/evade-button-with-icon/index.tsx
-"use client"
-import { Button } from "@/registry/foliokit/catchme-button"
-import { Heart, Star, Zap, Rocket } from "lucide-react"
+"use client";
+import { Button } from "@/registry/foliokit/catchme-button";
+import { Heart, Star, Zap, Rocket } from "lucide-react";
 
 const EvadeButtonWithIcon = () => {
   return (
@@ -29,7 +29,7 @@ const EvadeButtonWithIcon = () => {
         <Star />
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default EvadeButtonWithIcon
+export default EvadeButtonWithIcon;

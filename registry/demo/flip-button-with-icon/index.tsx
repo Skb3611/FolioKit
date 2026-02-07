@@ -1,5 +1,5 @@
-import { FlipButton } from "@/registry/foliokit/flip-button"
-import { ArrowRight } from "lucide-react"
+import { FlipButton } from "@/registry/foliokit/flip-button";
+import { ArrowRight } from "lucide-react";
 
 const FlipButtonWithIcon = () => {
   return (
@@ -16,7 +16,7 @@ const FlipButtonWithIcon = () => {
         </span>
       </FlipButton>
     </div>
-  )
-}
+  );
+};
 
-export default FlipButtonWithIcon
+export default FlipButtonWithIcon;

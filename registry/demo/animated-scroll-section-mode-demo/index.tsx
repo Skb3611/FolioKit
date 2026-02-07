@@ -11,7 +11,6 @@ const AnimatedScrollSectionDemo = () => {
         browserMode="default"
         videoSrc="https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4"
       />
-      
     </div>
   );
 };

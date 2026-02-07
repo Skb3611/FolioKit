@@ -1,4 +1,4 @@
-import { FlipButton } from "@/registry/foliokit/flip-button"
+import { FlipButton } from "@/registry/foliokit/flip-button";
 
 const FlipButtonDirections = () => {
   return (
@@ -19,7 +19,7 @@ const FlipButtonDirections = () => {
         Right
       </FlipButton>
     </div>
-  )
-}
+  );
+};
 
-export default FlipButtonDirections
+export default FlipButtonDirections;

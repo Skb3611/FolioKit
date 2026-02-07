@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/demo/animated-scroll-section-transform-factor-demo/index.tsx",
-      "content": "import AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section with Transform Factors\r\n      </h1>\r\n      <AnimatedScrollSection\r\n        url=\"https://gitfolio.in/\"\r\n        videoSrc=\"https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4\"\r\n        scaleRange={[0.5, 1]}\r\n        rotateXRange={[20, 1]}\r\n        translateYRange={[0, 200]}\r\n      />\r\n      \r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;\r\n",
+      "content": "import AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\n\nconst AnimatedScrollSectionDemo = () => {\n  return (\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\n      <h1 className=\"text-5xl font-bold text-center text-white\">\n        Animated Scroll Section with Transform Factors\n      </h1>\n      <AnimatedScrollSection\n        url=\"https://gitfolio.in/\"\n        videoSrc=\"https://pub-7e33da773f24477fad91084ffacf40cb.r2.dev/templates/notion-theme/preview/vid.mp4\"\n        scaleRange={[0.5, 1]}\n        rotateXRange={[20, 1]}\n        translateYRange={[0, 200]}\n      />\n    </div>\n  );\n};\n\nexport default AnimatedScrollSectionDemo;\n",
       "type": "registry:component"
     }
   ],

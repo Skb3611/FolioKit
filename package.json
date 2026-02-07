@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "format:registry": "prettier --write registry",
+    "format:docs":"prettier --write content",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "npx tsx ./scripts/build.mts && shadcn build"
+    "registry:build": "npx tsx ./scripts/build.mts && shadcn build",
+    "prebuild": "pnpm run format:registry && pnpm run format:docs",
+    "build": "pnpm run registry:build && next build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -49,6 +52,7 @@
     "@types/react-dom": "19.2.3",
     "eslint": "^9.32.0",
     "eslint-config-next": "16.1.6",
+    "prettier": "^3.8.1",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.2"
   },

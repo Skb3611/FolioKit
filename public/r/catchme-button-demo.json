@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/demo/catchme-button-demo/index.tsx",
-      "content": "\"use client\"\r\nimport { Button }  from \"@/components/foliokit/catchme-button\"\r\n\r\nconst CatchButtonDemo = () => {\r\n  return (\r\n    <div className=\"flex items-center justify-center\">\r\n    <Button evade variant=\"default\" size=\"lg\">\r\n    Catch me! 🏃‍♂️\r\n  </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CatchButtonDemo\r\n",
+      "content": "\"use client\";\nimport { Button } from \"@/components/foliokit/catchme-button\";\n\nconst CatchButtonDemo = () => {\n  return (\n    <div className=\"flex items-center justify-center\">\n      <Button evade variant=\"default\" size=\"lg\">\n        Catch me! 🏃‍♂️\n      </Button>\n    </div>\n  );\n};\n\nexport default CatchButtonDemo;\n",
       "type": "registry:component"
     }
   ],

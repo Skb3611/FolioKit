@@ -1,17 +1,16 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "accordion-demo",
-    "type": "registry:component",
-    "title": "accordion Demo",
-    "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
-    "dependencies": [],
-    "registryDependencies": [],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/demo/accordion-demo/index.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  }
-  
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-demo",
+  "type": "registry:component",
+  "title": "accordion Demo",
+  "description": "A vertically stacked set of interactive headings that each reveal an associated section of content.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/accordion-demo/index.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}

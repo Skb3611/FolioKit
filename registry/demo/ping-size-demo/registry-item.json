@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ping-size-demo",
   "type": "registry:component",
-  "title": "Ping Size Demo",  
+  "title": "Ping Size Demo",
   "description": "A compact status indicator for real-time activity with different sizes",
   "dependencies": [],
   "registryDependencies": [],

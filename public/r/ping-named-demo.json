@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/demo/ping-named-demo/index.tsx",
-      "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col gap-2\">\r\n      <Ping state=\"active\" label=\"Active Ping\" />\r\n      <Ping state=\"down\" label=\"Down Ping\" />\r\n      <Ping state=\"idle\" label=\"Idle Ping\" />\r\n      <Ping state=\"fixing\" label=\"Fixing Ping\" />\r\n      <Ping state=\"active\" size=\"sm\" label=\"Small Active Ping\" />\r\n      <Ping state=\"fixing\" size=\"lg\" label=\"Large Fixing Ping\" />\r\n    </div>\r\n  );\r\n}\r\n",
+      "content": "import Ping from \"@/components/foliokit/ping\";\n\nexport function PingDemo() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <Ping state=\"active\" label=\"Active Ping\" />\n      <Ping state=\"down\" label=\"Down Ping\" />\n      <Ping state=\"idle\" label=\"Idle Ping\" />\n      <Ping state=\"fixing\" label=\"Fixing Ping\" />\n      <Ping state=\"active\" size=\"sm\" label=\"Small Active Ping\" />\n      <Ping state=\"fixing\" size=\"lg\" label=\"Large Fixing Ping\" />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

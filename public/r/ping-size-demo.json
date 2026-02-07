@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/demo/ping-size-demo/index.tsx",
-      "content": "import Ping from \"@/components/foliokit/ping\";\r\n\r\nexport function PingDemo() {\r\n  return (\r\n    <div className=\"flex flex-col gap-2\">\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\r\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\r\n    </div>\r\n  );\r\n}\r\n",
+      "content": "import Ping from \"@/components/foliokit/ping\";\n\nexport function PingDemo() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <Ping state=\"active\" label=\"Active Ping\" size=\"sm\" />\n      <Ping state=\"active\" label=\"Active Ping\" size=\"md\" />\n      <Ping state=\"active\" label=\"Active Ping\" size=\"lg\" />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

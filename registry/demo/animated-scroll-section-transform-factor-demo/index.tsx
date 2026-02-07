@@ -13,7 +13,6 @@ const AnimatedScrollSectionDemo = () => {
         rotateXRange={[20, 1]}
         translateYRange={[0, 200]}
       />
-      
     </div>
   );
 };

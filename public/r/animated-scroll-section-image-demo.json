@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/demo/animated-scroll-section-image-demo/index.tsx",
-      "content": "import React from \"react\";\r\nimport AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\r\n\r\nconst AnimatedScrollSectionDemo = () => {\r\n  return (\r\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\r\n      <h1 className=\"text-5xl font-bold text-center text-white\">\r\n        Animated Scroll Section with Image\r\n      </h1>\r\n      <AnimatedScrollSection imgSrc=\"https://gitfolio.in/assets/og.png\" />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AnimatedScrollSectionDemo;\r\n",
+      "content": "import React from \"react\";\nimport AnimatedScrollSection from \"@/components/foliokit/animated-scroll-section\";\n\nconst AnimatedScrollSectionDemo = () => {\n  return (\n    <div className=\"w-full h-[80vh] flex flex-col items-center justify-start\">\n      <h1 className=\"text-5xl font-bold text-center text-white\">\n        Animated Scroll Section with Image\n      </h1>\n      <AnimatedScrollSection imgSrc=\"https://gitfolio.in/assets/og.png\" />\n    </div>\n  );\n};\n\nexport default AnimatedScrollSectionDemo;\n",
       "type": "registry:component"
     }
   ],

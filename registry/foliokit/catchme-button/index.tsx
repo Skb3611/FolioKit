@@ -1,9 +1,9 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "@radix-ui/react-slot"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { Slot } from "@radix-ui/react-slot";
 
 function cn(...classes: (string | undefined | null | false)[]) {
-    return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 const buttonVariants = cva(
@@ -37,18 +37,19 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
-)
+  },
+);
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-  evade?: boolean
-  evadeDistance?: number
-  evadeThreshold?: number
-  boundaryWidth?: number
-  boundaryHeight?: number
+  asChild?: boolean;
+  evade?: boolean;
+  evadeDistance?: number;
+  evadeThreshold?: number;
+  boundaryWidth?: number;
+  boundaryHeight?: number;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -65,67 +66,67 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       boundaryHeight = 300,
       ...props
     },
-    ref
+    ref,
   ) => {
-    const Comp = asChild ? Slot : "button"
-    const buttonRef = React.useRef<HTMLButtonElement>(null)
-    const [position, setPosition] = React.useState({ x: 0, y: 0 })
-    const [isEvading, setIsEvading] = React.useState(false)
+    const Comp = asChild ? Slot : "button";
+    const buttonRef = React.useRef<HTMLButtonElement>(null);
+    const [position, setPosition] = React.useState({ x: 0, y: 0 });
+    const [isEvading, setIsEvading] = React.useState(false);
 
-    React.useImperativeHandle(ref, () => buttonRef.current!)
+    React.useImperativeHandle(ref, () => buttonRef.current!);
 
     React.useEffect(() => {
-      if (!evade || !buttonRef.current) return
+      if (!evade || !buttonRef.current) return;
 
       const handleMouseMove = (e: MouseEvent) => {
-        if (!buttonRef.current) return
+        if (!buttonRef.current) return;
 
-        const button = buttonRef.current
-        const rect = button.getBoundingClientRect()
+        const button = buttonRef.current;
+        const rect = button.getBoundingClientRect();
 
         // Calculate button center
-        const buttonCenterX = rect.left + rect.width / 2
-        const buttonCenterY = rect.top + rect.height / 2
+        const buttonCenterX = rect.left + rect.width / 2;
+        const buttonCenterY = rect.top + rect.height / 2;
 
         // Calculate distance from mouse to button center
-        const deltaX = e.clientX - buttonCenterX
-        const deltaY = e.clientY - buttonCenterY
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+        const deltaX = e.clientX - buttonCenterX;
+        const deltaY = e.clientY - buttonCenterY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
         if (distance < evadeThreshold) {
-          setIsEvading(true)
+          setIsEvading(true);
 
           // Calculate angle from mouse to button
-          const angle = Math.atan2(deltaY, deltaX)
+          const angle = Math.atan2(deltaY, deltaX);
 
           // Calculate evasion intensity (stronger when closer)
-          const intensity = 1 - distance / evadeThreshold
-          const currentEvadeDistance = evadeDistance * intensity
+          const intensity = 1 - distance / evadeThreshold;
+          const currentEvadeDistance = evadeDistance * intensity;
 
           // Calculate new position (move away from mouse)
-          const moveX = -Math.cos(angle) * currentEvadeDistance
-          const moveY = -Math.sin(angle) * currentEvadeDistance
+          const moveX = -Math.cos(angle) * currentEvadeDistance;
+          const moveY = -Math.sin(angle) * currentEvadeDistance;
 
           // Apply boundaries
-          const maxX = boundaryWidth
-          const maxY = boundaryHeight
+          const maxX = boundaryWidth;
+          const maxY = boundaryHeight;
 
-          const clampedX = Math.max(-maxX, Math.min(maxX, moveX))
-          const clampedY = Math.max(-maxY, Math.min(maxY, moveY))
+          const clampedX = Math.max(-maxX, Math.min(maxX, moveX));
+          const clampedY = Math.max(-maxY, Math.min(maxY, moveY));
 
-          setPosition({ x: clampedX, y: clampedY })
+          setPosition({ x: clampedX, y: clampedY });
         } else if (distance > evadeThreshold * 1.8) {
-          setIsEvading(false)
-          setPosition({ x: 0, y: 0 })
+          setIsEvading(false);
+          setPosition({ x: 0, y: 0 });
         }
-      }
+      };
 
-      window.addEventListener("mousemove", handleMouseMove)
+      window.addEventListener("mousemove", handleMouseMove);
 
       return () => {
-        window.removeEventListener("mousemove", handleMouseMove)
-      }
-    }, [evade, evadeDistance, evadeThreshold, boundaryWidth, boundaryHeight])
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+    }, [evade, evadeDistance, evadeThreshold, boundaryWidth, boundaryHeight]);
 
     return (
       <Comp
@@ -150,9 +151,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         }
         {...props}
       />
-    )
-  }
-)
-Button.displayName = "Button"
+    );
+  },
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import React, { CSSProperties, useEffect } from "react"
-import { motion, HTMLMotionProps } from "motion/react"
+import React, { CSSProperties, useEffect } from "react";
+import { motion, HTMLMotionProps } from "motion/react";
 
 function cn(...classes: (string | undefined | null | false)[]) {
-    return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 // Inject animations into the document
 const injectFlipAnimations = () => {
-  if (typeof document === 'undefined') return;
-  
-  const styleId = 'Flip-animations-styles';
+  if (typeof document === "undefined") return;
+
+  const styleId = "Flip-animations-styles";
   if (document.getElementById(styleId)) return;
 
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.id = styleId;
   style.textContent = `
     @keyframes Flip-slide {
@@ -49,20 +49,20 @@ const injectFlipAnimations = () => {
   document.head.appendChild(style);
 };
 
-interface FlipButtonProps extends Omit<HTMLMotionProps<"button">, 'style'> {
-  FlipColor?: string
-  FlipSize?: string
-  borderRadius?: string
-  FlipDuration?:string
-  background?: string
-  className?: string
-  children?: React.ReactNode
-  flipContent?: React.ReactNode
-  flipFrom?: 'top' | 'bottom' | 'left' | 'right'
-  tapScale?: number
-  style?: CSSProperties
-  flipBackground?: string
-  flipTextColor?: string
+interface FlipButtonProps extends Omit<HTMLMotionProps<"button">, "style"> {
+  FlipColor?: string;
+  FlipSize?: string;
+  borderRadius?: string;
+  FlipDuration?: string;
+  background?: string;
+  className?: string;
+  children?: React.ReactNode;
+  flipContent?: React.ReactNode;
+  flipFrom?: "top" | "bottom" | "left" | "right";
+  tapScale?: number;
+  style?: CSSProperties;
+  flipBackground?: string;
+  flipTextColor?: string;
 }
 
 const buildVariant = ({
@@ -72,17 +72,17 @@ const buildVariant = ({
   isVertical,
   rotateAxis,
 }: {
-  opacity: number
-  rotation: number
-  offset: string | null
-  isVertical: boolean
-  rotateAxis: string
+  opacity: number;
+  rotation: number;
+  offset: string | null;
+  isVertical: boolean;
+  rotateAxis: string;
 }) => ({
   opacity,
   [rotateAxis]: rotation,
   ...(isVertical && offset !== null ? { y: offset } : {}),
   ...(!isVertical && offset !== null ? { x: offset } : {}),
-})
+});
 
 const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
   (props, ref) => {
@@ -95,29 +95,31 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
       className,
       children,
       flipContent,
-      flipFrom = 'top',
+      flipFrom = "top",
       tapScale = 0.95,
       style,
       flipBackground = "rgba(255, 255, 255, 1)",
       flipTextColor = "#000000",
       ...restProps
-    } = props
+    } = props;
 
     // Inject animations on mount
     useEffect(() => {
       injectFlipAnimations();
     }, []);
 
-    const isVertical = flipFrom === 'top' || flipFrom === 'bottom'
-    const rotateAxis = isVertical ? 'rotateX' : 'rotateY'
-    const frontOffset = flipFrom === 'top' || flipFrom === 'left' ? '50%' : '-50%'
-    const backOffset = flipFrom === 'top' || flipFrom === 'left' ? '-50%' : '50%'
+    const isVertical = flipFrom === "top" || flipFrom === "bottom";
+    const rotateAxis = isVertical ? "rotateX" : "rotateY";
+    const frontOffset =
+      flipFrom === "top" || flipFrom === "left" ? "50%" : "-50%";
+    const backOffset =
+      flipFrom === "top" || flipFrom === "left" ? "-50%" : "50%";
 
     const frontVariants = {
       initial: buildVariant({
         opacity: 1,
         rotation: 0,
-        offset: '0%',
+        offset: "0%",
         isVertical,
         rotateAxis,
       }),
@@ -128,7 +130,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
         isVertical,
         rotateAxis,
       }),
-    }
+    };
 
     const backVariants = {
       initial: buildVariant({
@@ -141,19 +143,19 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
       hover: buildVariant({
         opacity: 1,
         rotation: 0,
-        offset: '0%',
+        offset: "0%",
         isVertical,
         rotateAxis,
       }),
-    }
+    };
 
     // Slower, more realistic transition
-    const transition = { 
-      type: 'spring' as const, 
-      stiffness: 180, 
+    const transition = {
+      type: "spring" as const,
+      stiffness: 180,
       damping: 25,
-      mass: 1.2
-    }
+      mass: 1.2,
+    };
 
     const buttonStyle: CSSProperties = {
       "--spread": "90deg",
@@ -164,7 +166,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
       "--bg": background,
       "--flip-bg": flipBackground,
       ...style,
-    } as CSSProperties
+    } as CSSProperties;
 
     // If no flip content, render regular Flip button
     if (!flipContent) {
@@ -174,7 +176,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           className={cn(
             "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-white/10 whitespace-nowrap text-white [background:var(--bg)]",
             "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px",
-            className
+            className,
           )}
           ref={ref}
           {...(restProps as React.ButtonHTMLAttributes<HTMLButtonElement>)}
@@ -183,7 +185,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           <div
             className={cn(
               "-z-30 blur-[5px]",
-              "@container-[size] absolute inset-0 overflow-visible"
+              "@container-[size] absolute inset-0 overflow-visible",
             )}
           >
             <div className="animate-Flip-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]">
@@ -199,18 +201,18 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
               "rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]",
               "transform-gpu transition-all duration-300 ease-in-out",
               "group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]",
-              "group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
+              "group-active:shadow-[inset_0_-10px_10px_#ffffff3f]",
             )}
           />
 
           {/* backdrop */}
           <div
             className={cn(
-              "absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]"
+              "absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]",
             )}
           />
         </button>
-      )
+      );
     }
 
     // Render flip button with Flip effect
@@ -221,15 +223,15 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
         whileTap={{ scale: tapScale }}
         style={{
           ...buttonStyle,
-          display: 'inline-grid',
-          placeItems: 'center',
-          perspective: '1000px',
-          transformStyle: 'preserve-3d',
+          display: "inline-grid",
+          placeItems: "center",
+          perspective: "1000px",
+          transformStyle: "preserve-3d",
         }}
         className={cn(
           "group relative z-0 cursor-pointer overflow-hidden rounded-lg border border-white/10 px-10 py-2 whitespace-nowrap [background:var(--bg)]",
           "transform-gpu",
-          className
+          className,
         )}
         ref={ref}
         {...restProps}
@@ -240,7 +242,7 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           initial={{ opacity: 0 }}
           variants={{
             initial: { opacity: 0 },
-            hover: { opacity: 1 }
+            hover: { opacity: 1 },
           }}
           transition={transition}
           style={{
@@ -253,11 +255,11 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
         <motion.div
           className={cn(
             "-z-30 blur-[2px]",
-            "@container-[size] absolute inset-0 overflow-visible"
+            "@container-[size] absolute inset-0 overflow-visible",
           )}
           variants={{
             initial: { opacity: 1 },
-            hover: { opacity: 0 }
+            hover: { opacity: 0 },
           }}
           transition={transition}
         >
@@ -271,14 +273,14 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           variants={frontVariants}
           transition={transition}
           style={{
-            gridArea: '1 / 1',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            gridArea: "1 / 1",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
             zIndex: 1,
-            color: '#ffffff',
-            transformStyle: 'preserve-3d',
-            backfaceVisibility: 'hidden',
+            color: "#ffffff",
+            transformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
           }}
         >
           {children}
@@ -289,14 +291,14 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
           variants={backVariants}
           transition={transition}
           style={{
-            gridArea: '1 / 1',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            gridArea: "1 / 1",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
             color: flipTextColor,
             zIndex: 1,
-            transformStyle: 'preserve-3d',
-            backfaceVisibility: 'hidden',
+            transformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
           }}
         >
           {flipContent}
@@ -309,11 +311,11 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
             "rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]",
             "transform-gpu transition-all duration-300 ease-in-out",
             "group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]",
-            "group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
+            "group-active:shadow-[inset_0_-10px_10px_#ffffff3f]",
           )}
           variants={{
             initial: { opacity: 1 },
-            hover: { opacity: 0 }
+            hover: { opacity: 0 },
           }}
           transition={transition}
         />
@@ -321,14 +323,14 @@ const FlipButton = React.forwardRef<HTMLButtonElement, FlipButtonProps>(
         {/* backdrop */}
         <div
           className={cn(
-            "absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]"
+            "absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]",
           )}
         />
       </motion.button>
-    )
-  }
-)
+    );
+  },
+);
 
-FlipButton.displayName = "FlipButton"
+FlipButton.displayName = "FlipButton";
 
-export { FlipButton, type FlipButtonProps }
+export { FlipButton, type FlipButtonProps };

@@ -1,16 +1,16 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "catchme-button-icon-demo",
-    "type": "registry:component",
-    "title": "Catchme Button with icon demo",
-    "description": "Button that moves away from cursor when hovered",
-    "dependencies": ["lucide-react"],
-    "registryDependencies": [],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/demo/catchme-button-icon-demo/index.tsx",
-        "type": "registry:component"
-      }
-    ]
-  }
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "catchme-button-icon-demo",
+  "type": "registry:component",
+  "title": "Catchme Button with icon demo",
+  "description": "Button that moves away from cursor when hovered",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/catchme-button-icon-demo/index.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

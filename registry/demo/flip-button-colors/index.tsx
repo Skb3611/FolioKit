@@ -1,4 +1,4 @@
-import { FlipButton } from "@/registry/foliokit/flip-button"
+import { FlipButton } from "@/registry/foliokit/flip-button";
 
 const FlipButtonColors = () => {
   return (
@@ -32,7 +32,7 @@ const FlipButtonColors = () => {
         Success
       </FlipButton>
     </div>
-  )
-}
+  );
+};
 
-export default FlipButtonColors
+export default FlipButtonColors;

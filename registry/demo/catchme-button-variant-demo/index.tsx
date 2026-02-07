@@ -1,6 +1,6 @@
 // registry/demo/evade-button-variants/index.tsx
-"use client"
-import { Button } from "@/registry/foliokit/catchme-button"
+"use client";
+import { Button } from "@/registry/foliokit/catchme-button";
 
 const EvadeButtonVariants = () => {
   return (
@@ -24,7 +24,7 @@ const EvadeButtonVariants = () => {
         Link
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default EvadeButtonVariants
+export default EvadeButtonVariants;

@@ -42,7 +42,7 @@ const Ping: React.FC<PingProps> = ({
   label,
   className,
   size = "md",
-  labelClassName
+  labelClassName,
 }) => {
   const shouldAnimate =
     state === "active" || state === "fixing" || state === "down";
@@ -57,7 +57,7 @@ const Ping: React.FC<PingProps> = ({
             className={cn(
               "absolute inline-flex rounded-full opacity-75 animate-ping",
               sizeClasses.ping,
-              colors.ping
+              colors.ping,
             )}
           />
         )}
@@ -65,7 +65,7 @@ const Ping: React.FC<PingProps> = ({
           className={cn(
             "relative inline-flex rounded-full",
             sizeClasses.dot,
-            colors.dot
+            colors.dot,
           )}
         />
       </div>
@@ -73,7 +73,7 @@ const Ping: React.FC<PingProps> = ({
         <p
           className={cn(
             "text-sm text-slate-700 dark:text-slate-300",
-            labelClassName
+            labelClassName,
           )}
         >
           {label}

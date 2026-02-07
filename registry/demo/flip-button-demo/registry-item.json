@@ -1,17 +1,16 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-    "name": "flip-button-demo",
-    "type": "registry:component",
-    "title": "Flip Button Demo",
-    "description": "Demo of Button that flips when Hovered",
-    "dependencies": ["motion"],
-    "registryDependencies": [],
-    "devDependencies": [],
-    "files": [
-      {
-        "path": "registry/demo/flip-button-demo/index.tsx",
-        "type": "registry:component"
-      }
-    ]
-  }
-  
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-button-demo",
+  "type": "registry:component",
+  "title": "Flip Button Demo",
+  "description": "Demo of Button that flips when Hovered",
+  "dependencies": ["motion"],
+  "registryDependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/flip-button-demo/index.tsx",
+      "type": "registry:component"
+    }
+  ]
+}
