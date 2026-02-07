@@ -4,6 +4,9 @@ import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ClientOnly } from "@/components/docs/client-only";
+import Head from "next/head";
+import Script from "next/script";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,12 +58,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{colorScheme:"dark"}}>
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
         <RootProvider>
-            <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>{children}</TooltipProvider>
         </RootProvider>
       </body>
     </html>
