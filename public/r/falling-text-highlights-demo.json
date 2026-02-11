@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "falling-text-highlights-demo",
+  "title": "Falling Text Highlights Demo",
+  "description": "Demo of the falling text component with various highlight options",
+  "dependencies": [
+    "matter-js"
+  ],
+  "devDependencies": [
+    "@types/matter-js"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/falling-text-highlights-demo/index.tsx",
+      "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextHighlightDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Create amazing effects with gradient highlights!\"\n        highlightWords={[\"amazing\", \"gradient\", \"highlights!\"]}\n        highlightClassName=\"bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold\"\n        trigger=\"auto\"\n        fontSize=\"1.8rem\"\n        minHeight=\"250px\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

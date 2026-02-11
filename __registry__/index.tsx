@@ -414,6 +414,138 @@ export const index: Record<string, any> = {
     })(),
     command: '@foliokit/catchme-button-variant-demo',
   },
+  "falling-text-demo": {
+    name: "falling-text-demo",
+    description: "Demo of the falling text component with various options",
+    type: "registry:component",
+    dependencies: ["matter-js"],
+    devDependencies: ["@types/matter-js"],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/falling-text-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Welcome to FolioKit!\"\n        highlightWords={[\"FolioKit\"]}\n        trigger=\"auto\"\n        fontSize=\"2rem\"\n        enableShadows={true}\n        shadowIntensity={0.7}\n      />\n    </div>\n  );\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/falling-text-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "falling-text-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/falling-text-demo',
+  },
+  "falling-text-highlights-demo": {
+    name: "falling-text-highlights-demo",
+    description: "Demo of the falling text component with various highlight options",
+    type: "registry:component",
+    dependencies: ["matter-js"],
+    devDependencies: ["@types/matter-js"],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/falling-text-highlights-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextHighlightDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Create amazing effects with gradient highlights!\"\n        highlightWords={[\"amazing\", \"gradient\", \"highlights!\"]}\n        highlightClassName=\"bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold\"\n        trigger=\"auto\"\n        fontSize=\"1.8rem\"\n        minHeight=\"250px\"\n      />\n    </div>\n  );\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/falling-text-highlights-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "falling-text-highlights-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/falling-text-highlights-demo',
+  },
+  "falling-text-physics-demo": {
+    name: "falling-text-physics-demo",
+    description: "Demo of the falling text component with various physics options",
+    type: "registry:component",
+    dependencies: ["matter-js"],
+    devDependencies: ["@types/matter-js"],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/falling-text-physics-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextPhysicsDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Dead drop with no restitution\"\n        trigger=\"auto\"\n        fontSize=\"2rem\"\n        physicsOptions={{\n          restitution: 0,\n          frictionAir: 0.02,\n          friction: 0.5,\n        }}\n        minHeight=\"300px\"\n      />\n    </div>\n  );\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/falling-text-physics-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "falling-text-physics-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/falling-text-physics-demo',
+  },
+  "falling-text-shadows-demo": {
+    name: "falling-text-shadows-demo",
+    description: "Demo of the falling text component with various shadow options",
+    type: "registry:component",
+    dependencies: ["matter-js"],
+    devDependencies: ["@types/matter-js"],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/demo/falling-text-shadows-demo/index.tsx",
+    "type": "registry:component",
+    "target": "",
+    "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextShadowsDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Watch the light shadows fall beneath\"\n        trigger=\"auto\"\n        fontSize=\"2rem\"\n        enableShadows={true}\n        shadowColor=\"rgba(255, 255, 255, 0.25)\"\n        shadowIntensity={0.6}\n        minHeight=\"300px\"\n      />\n    </div>\n  );\n}"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/demo/falling-text-shadows-demo/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "falling-text-shadows-demo";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/falling-text-shadows-demo',
+  },
   "flip-button-colors": {
     name: "flip-button-colors",
     description: "Flip button examples with custom background and text colors",
@@ -815,6 +947,39 @@ export const index: Record<string, any> = {
       return LazyComp;
     })(),
     command: '@foliokit/catchme-button',
+  },
+  "falling-text": {
+    name: "falling-text",
+    description: "Text that falls and bounces with physics",
+    type: "registry:component",
+    dependencies: ["matter-js"],
+    devDependencies: ["@types/matter-js"],
+    registryDependencies: [],
+    files: [
+  {
+    "path": "registry/foliokit/falling-text/index.tsx",
+    "type": "registry:component",
+    "target": "components/ui/foliokit/falling-text.tsx",
+    "content": "\"use client\";\nimport Matter from \"matter-js\";\nimport { useCallback, useEffect, useRef, useState } from \"react\";\n\nexport interface FallingTextProps {\n  text: string;\n  highlightWords?: string[];\n  trigger?: \"auto\" | \"scroll\" | \"click\" | \"hover\";\n  backgroundColor?: string;\n  wireframes?: boolean;\n  gravity?: number;\n  mouseConstraintStiffness?: number;\n  fontSize?: string;\n  className?: string;\n\n  onAnimationStart?: () => void;\n  onAnimationEnd?: () => void;\n\n  physicsOptions?: {\n    restitution?: number;\n    frictionAir?: number;\n    friction?: number;\n    density?: number;\n  };\n\n  initialVelocity?: {\n    x?: number;\n    y?: number;\n    angular?: number;\n  };\n  highlightClassName?: string;\n  wordSpacing?: number;\n  minHeight?: string;\n  enableMouseInteraction?: boolean;\n  resetKey?: number;\n\n  // Shadow projection options\n  enableShadows?: boolean;\n  shadowColor?: string;\n  shadowIntensity?: number;\n  lightSourceY?: number;\n}\n\nconst FallingText: React.FC<FallingTextProps> = ({\n  text,\n  highlightWords = [],\n  trigger = \"auto\",\n  backgroundColor = \"transparent\",\n  wireframes = false,\n  gravity = 1,\n  mouseConstraintStiffness = 0.2,\n  fontSize = \"1rem\",\n  className = \"\",\n  onAnimationStart,\n  onAnimationEnd,\n  physicsOptions = {},\n  initialVelocity = {},\n  highlightClassName = \"text-red-500 font-bold underline\",\n  wordSpacing = 2,\n  minHeight = \"300px\",\n  enableMouseInteraction = true,\n  resetKey = 0,\n\n  // Shadow projection defaults\n  enableShadows = false,\n  shadowColor = \"rgba(0, 0, 0, 0.3)\",\n  shadowIntensity = 0.5,\n  lightSourceY = 0,\n}) => {\n  const containerRef = useRef<HTMLDivElement | null>(null);\n  const textRef = useRef<HTMLDivElement | null>(null);\n  const canvasContainerRef = useRef<HTMLDivElement | null>(null);\n  const shadowContainerRef = useRef<HTMLDivElement | null>(null);\n  const engineRef = useRef<Matter.Engine | null>(null);\n  const renderRef = useRef<Matter.Render | null>(null);\n  const runnerRef = useRef<Matter.Runner | null>(null);\n  const animationFrameRef = useRef<number | null>(null);\n  const hasStartedRef = useRef(false);\n\n  const [effectStarted, setEffectStarted] = useState(false);\n  const [isReady, setIsReady] = useState(false);\n\n  const mergedPhysicsOptions = {\n    restitution: 0.8,\n    frictionAir: 0.01,\n    friction: 0.2,\n    density: 0.001,\n    ...physicsOptions,\n  };\n\n  const mergedInitialVelocity = {\n    x: 5,\n    y: 0,\n    angular: 0.05,\n    ...initialVelocity,\n  };\n\n  const cleanup = useCallback(() => {\n    if (animationFrameRef.current) {\n      cancelAnimationFrame(animationFrameRef.current);\n      animationFrameRef.current = null;\n    }\n\n    if (runnerRef.current && engineRef.current) {\n      Matter.Runner.stop(runnerRef.current);\n      runnerRef.current = null;\n    }\n\n    if (renderRef.current) {\n      Matter.Render.stop(renderRef.current);\n      if (renderRef.current.canvas && canvasContainerRef.current) {\n        try {\n          canvasContainerRef.current.removeChild(renderRef.current.canvas);\n        } catch (_e) {}\n      }\n      renderRef.current = null;\n    }\n\n    if (engineRef.current) {\n      Matter.World.clear(engineRef.current.world, false);\n      Matter.Engine.clear(engineRef.current);\n      engineRef.current = null;\n    }\n\n    hasStartedRef.current = false;\n  }, []);\n\n  useEffect(() => {\n    if (resetKey > 0) {\n      cleanup();\n      setEffectStarted(false);\n      setIsReady(false);\n\n      setTimeout(() => setIsReady(true), 50);\n    }\n  }, [resetKey, cleanup]);\n\n  useEffect(() => {\n    if (!textRef.current || !text) return;\n\n    const words = text.split(\" \").filter((word) => word.length > 0);\n\n    const newHTML = words\n      .map((word) => {\n        const isHighlighted = highlightWords.some((hw) =>\n          word.toLowerCase().startsWith(hw.toLowerCase()),\n        );\n        return `<span\n          class=\"inline-block select-none transition-colors duration-200 ${\n            isHighlighted ? highlightClassName : \"\"\n          }\"\n          style=\"margin: 0 ${wordSpacing}px;\"\n        >\n          ${word}\n        </span>`;\n      })\n      .join(\" \");\n\n    textRef.current.innerHTML = newHTML;\n    setIsReady(true);\n  }, [text, highlightWords, highlightClassName, wordSpacing]);\n\n  useEffect(() => {\n    if (trigger === \"auto\") {\n      setEffectStarted(true);\n      return;\n    }\n\n    if (trigger === \"scroll\" && containerRef.current) {\n      const observer = new IntersectionObserver(\n        ([entry]) => {\n          if (entry?.isIntersecting) {\n            setEffectStarted(true);\n            observer.disconnect();\n          }\n        },\n        { threshold: 0.1 },\n      );\n      observer.observe(containerRef.current);\n      return () => observer.disconnect();\n    }\n  }, [trigger]);\n\n  useEffect(() => {\n    if (!effectStarted || !isReady || hasStartedRef.current) return;\n\n    const {\n      Engine,\n      Render,\n      World,\n      Bodies,\n      Runner,\n      Mouse,\n      MouseConstraint,\n      Body,\n    } = Matter;\n\n    if (\n      !containerRef.current ||\n      !canvasContainerRef.current ||\n      !textRef.current\n    )\n      return;\n\n    const containerRect = containerRef.current.getBoundingClientRect();\n    const width = containerRect.width;\n    const height = containerRect.height;\n\n    if (width <= 0 || height <= 0) {\n      console.warn(\"FallingText: Container has invalid dimensions\");\n      return;\n    }\n\n    hasStartedRef.current = true;\n    onAnimationStart?.();\n\n    const engine = Engine.create();\n    engine.world.gravity.y = gravity;\n    engineRef.current = engine;\n\n    const render = Render.create({\n      element: canvasContainerRef.current,\n      engine,\n      options: {\n        width,\n        height,\n        background: backgroundColor,\n        wireframes,\n      },\n    });\n    renderRef.current = render;\n\n    const boundaryOptions = {\n      isStatic: true,\n      render: { fillStyle: \"transparent\" },\n    };\n\n    const floor = Bodies.rectangle(\n      width / 2,\n      height + 25,\n      width,\n      50,\n      boundaryOptions,\n    );\n    const leftWall = Bodies.rectangle(\n      -25,\n      height / 2,\n      50,\n      height,\n      boundaryOptions,\n    );\n    const rightWall = Bodies.rectangle(\n      width + 25,\n      height / 2,\n      50,\n      height,\n      boundaryOptions,\n    );\n    const ceiling = Bodies.rectangle(\n      width / 2,\n      -25,\n      width,\n      50,\n      boundaryOptions,\n    );\n\n    const wordSpans = textRef.current.querySelectorAll(\"span\");\n    const wordBodies = Array.from(wordSpans).map((elem) => {\n      const rect = elem.getBoundingClientRect();\n      const x = rect.left - containerRect.left + rect.width / 2;\n      const y = rect.top - containerRect.top + rect.height / 2;\n\n      const body = Bodies.rectangle(x, y, rect.width, rect.height, {\n        render: { fillStyle: \"transparent\" },\n        ...mergedPhysicsOptions,\n      });\n\n      Body.setVelocity(body, {\n        x: (Math.random() - 0.5) * mergedInitialVelocity.x,\n        y: (Math.random() - 0.5) * mergedInitialVelocity.y,\n      });\n      Body.setAngularVelocity(\n        body,\n        (Math.random() - 0.5) * mergedInitialVelocity.angular,\n      );\n\n      return { elem: elem as HTMLElement, body };\n    });\n\n    wordBodies.forEach(({ elem, body }) => {\n      elem.style.position = \"absolute\";\n      elem.style.left = `${body.position.x}px`;\n      elem.style.top = `${body.position.y}px`;\n      elem.style.transform = \"translate(-50%, -50%)\";\n      elem.style.willChange = \"transform\";\n    });\n\n    // Create shadow elements\n    const shadowElements: HTMLElement[] = [];\n    if (enableShadows && shadowContainerRef.current) {\n      wordBodies.forEach(({ elem }) => {\n        const shadow = document.createElement(\"div\");\n        shadow.style.position = \"absolute\";\n        shadow.style.backgroundColor = shadowColor;\n        shadow.style.borderRadius = \"50%\";\n        shadow.style.pointerEvents = \"none\";\n        shadow.style.transformOrigin = \"center center\";\n        shadowContainerRef.current!.appendChild(shadow);\n        shadowElements.push(shadow);\n      });\n    }\n\n    let mouseConstraint: Matter.MouseConstraint | null = null;\n    if (enableMouseInteraction) {\n      const mouse = Mouse.create(containerRef.current);\n      mouseConstraint = MouseConstraint.create(engine, {\n        mouse,\n        constraint: {\n          stiffness: mouseConstraintStiffness,\n          render: { visible: false },\n        },\n      });\n      render.mouse = mouse;\n    }\n\n    const bodiesToAdd = [\n      floor,\n      leftWall,\n      rightWall,\n      ceiling,\n      ...wordBodies.map((wb) => wb.body),\n    ];\n    if (mouseConstraint) {\n      bodiesToAdd.push(mouseConstraint as any);\n    }\n    World.add(engine.world, bodiesToAdd);\n\n    const runner = Runner.create();\n    runnerRef.current = runner;\n    Runner.run(runner, engine);\n    Render.run(render);\n\n    let settledCount = 0;\n    const updateLoop = () => {\n      wordBodies.forEach(({ body, elem }, index) => {\n        const { x, y } = body.position;\n        elem.style.left = `${x}px`;\n        elem.style.top = `${y}px`;\n        elem.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;\n\n        // Shadow projection\n        if (enableShadows && shadowElements[index]) {\n          const shadow = shadowElements[index];\n          const floorY = height;\n          const distanceFromFloor = floorY - y;\n          const lightDistance = y - lightSourceY;\n\n          // Calculate shadow properties based on distance from floor\n          const shadowScale =\n            1 + Math.max(0, (height - distanceFromFloor) / height) * 0.8;\n          const shadowBlur = Math.max(\n            2,\n            ((height - distanceFromFloor) / height) * 15,\n          );\n          const shadowOpacity = Math.max(\n            0,\n            Math.min(\n              shadowIntensity,\n              shadowIntensity * (distanceFromFloor / height),\n            ),\n          );\n\n          // Position shadow on the floor\n          shadow.style.left = `${x}px`;\n          shadow.style.top = `${floorY - 30}px`; // Slightly above the actual floor\n          shadow.style.width = `${elem.offsetWidth * 0.6}px`;\n          shadow.style.height = `${elem.offsetHeight * 0.3}px`;\n          shadow.style.transform = `translate(-50%, -50%) scaleX(${shadowScale})`;\n          shadow.style.filter = `blur(${shadowBlur}px)`;\n          shadow.style.opacity = `${shadowOpacity}`;\n        }\n      });\n\n      const allSettled = wordBodies.every(({ body }) => {\n        const speed = Math.abs(body.velocity.x) + Math.abs(body.velocity.y);\n        return speed < 0.1;\n      });\n\n      if (allSettled) {\n        settledCount++;\n        if (settledCount > 60) {\n          onAnimationEnd?.();\n          return;\n        }\n      } else {\n        settledCount = 0;\n      }\n\n      animationFrameRef.current = requestAnimationFrame(updateLoop);\n    };\n    updateLoop();\n\n    return () => {\n      cleanup();\n      // Clean up shadow elements\n      if (shadowContainerRef.current) {\n        shadowContainerRef.current.innerHTML = \"\";\n      }\n    };\n  }, [\n    effectStarted,\n    isReady,\n    gravity,\n    wireframes,\n    backgroundColor,\n    mouseConstraintStiffness,\n    mergedPhysicsOptions,\n    mergedInitialVelocity,\n    enableMouseInteraction,\n    cleanup,\n    onAnimationStart,\n    onAnimationEnd,\n    enableShadows,\n    shadowColor,\n    shadowIntensity,\n    lightSourceY,\n  ]);\n\n  const handleTrigger = useCallback(() => {\n    if (!effectStarted && (trigger === \"click\" || trigger === \"hover\")) {\n      setEffectStarted(true);\n    }\n  }, [effectStarted, trigger]);\n\n  return (\n    <div\n      ref={containerRef}\n      className={`relative z-[1] w-full overflow-hidden pt-8 text-center ${className}`}\n      style={{ minHeight }}\n      onClick={trigger === \"click\" ? handleTrigger : undefined}\n      onMouseEnter={trigger === \"hover\" ? handleTrigger : undefined}\n      role=\"presentation\"\n      aria-label={\n        trigger !== \"auto\" ? \"Click or hover to animate text\" : undefined\n      }\n    >\n      <div\n        ref={textRef}\n        className=\"pointer-events-none inline-block\"\n        style={{\n          fontSize,\n          lineHeight: 1.4,\n        }}\n        aria-live=\"polite\"\n      />\n\n      {/* Shadow container */}\n      {enableShadows && (\n        <div\n          ref={shadowContainerRef}\n          className=\"pointer-events-none absolute inset-0\"\n          aria-hidden=\"true\"\n          style={{ zIndex: 0 }}\n        />\n      )}\n\n      {/* Physics canvas */}\n      <div\n        className=\"pointer-events-none absolute inset-0\"\n        ref={canvasContainerRef}\n        aria-hidden=\"true\"\n        style={{ zIndex: 1 }}\n      />\n    </div>\n  );\n};\n\nexport default FallingText;"
+  }
+],
+    keywords: [],
+    component: (function() {
+      const LazyComp = React.lazy(async () => {
+        const mod = await import("@/registry/foliokit/falling-text/index.tsx");
+        const exportName = Object.keys(mod).find(
+          key => typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || "falling-text";
+        const Comp = mod.default || mod[exportName];
+        if (mod.animations) {
+          (LazyComp as any).animations = mod.animations;
+        }
+        return { default: Comp };
+      });
+      LazyComp.demoProps = {};
+      return LazyComp;
+    })(),
+    command: '@foliokit/falling-text',
   },
   "flip-button": {
     name: "flip-button",
