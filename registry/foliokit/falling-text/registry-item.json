@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "falling-text",
+  "type": "registry:component",
+  "title": "Falling Text",
+  "description": "Text that falls and bounces with physics",
+  "dependencies": ["matter-js"],
+  "registryDependencies": [],
+  "devDependencies": ["@types/matter-js"],
+  "files": [
+    {
+      "path": "registry/foliokit/falling-text/index.tsx",
+      "type": "registry:component",
+      "target": "components/ui/foliokit/falling-text.tsx"
+    }
+  ]
+}

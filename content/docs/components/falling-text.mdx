@@ -1,0 +1,252 @@
+---
+title: Falling Text
+date: 2026-02-11
+description: A physics-based text animation component with Matter.js that makes text fall and interact with mouse movements
+author: foliokit
+---
+
+<ComponentPreview name="falling-text-demo" />
+
+## Installation
+
+<ShadcnTabs defaultValue="cli">
+
+<ShadcnTabsList variant="line">
+  <ShadcnTabsTrigger value="cli">CLI</ShadcnTabsTrigger>
+  <ShadcnTabsTrigger value="manual">Manual</ShadcnTabsTrigger>
+</ShadcnTabsList>
+
+<ShadcnTabsContent value="cli">
+
+<CodeBlockCommand
+  __npm__="npx shadcn@latest add https://folio-kit.vercel.app/r/falling-text.json"
+  __pnpm__="pnpm dlx shadcn@latest add https://folio-kit.vercel.app/r/falling-text.json"
+  __yarn__="yarn shadcn@latest add https://folio-kit.vercel.app/r/falling-text.json"
+  __bun__="bunx shadcn@latest add https://folio-kit.vercel.app/r/falling-text.json"
+/>
+
+</ShadcnTabsContent>
+
+<ShadcnTabsContent value="manual">
+
+<Steps>
+
+<Step>Install the required physics engine dependency.</Step>
+
+<CodeBlockCommand
+  __npm__="npm install matter-js"
+  __pnpm__="pnpm add matter-js"
+  __yarn__="yarn add matter-js"
+  __bun__="bunx add matter-js"
+/>
+
+<Step>Install the type definitions for Matter.js.</Step>
+
+<CodeBlockCommand
+  __npm__="npm install -D @types/matter-js"
+  __pnpm__="pnpm add -D @types/matter-js"
+  __yarn__="yarn add -D @types/matter-js"
+  __bun__="bunx add -D @types/matter-js"
+/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="falling-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</ShadcnTabsContent>
+
+</ShadcnTabs>
+
+### Usage
+
+```tsx
+import FallingText from "@/components/ui/falling-text";
+```
+
+```tsx
+<FallingText
+  text="Hello World! This text will fall with physics"
+  highlightWords={["Hello", "physics"]}
+  trigger="auto"
+/>
+```
+
+## Examples
+
+### Default Falling Text
+
+<ComponentPreview name="falling-text-demo" />
+
+###Highlighted Falling text
+
+<ComponentPreview name="falling-text-highlights-demo" />
+
+###Physics Failling text
+
+<ComponentPreview name="falling-text-physics-demo" />
+
+###Shadow text falling
+
+<ComponentPreview name="falling-text-shadows-demo" />
+## Props
+
+<TypeTable
+  type={{
+    text: {
+      description: "The text content to be animated",
+      type: "string",
+      default: "Required",
+    },
+    highlightWords: {
+      description: "Array of words to highlight with custom styling",
+      type: "string[]",
+      default: "[]",
+    },
+    trigger: {
+      description: "Animation trigger method",
+      type: "'auto' | 'scroll' | 'click' | 'hover'",
+      default: "'auto'",
+    },
+    backgroundColor: {
+      description: "Background color of the physics canvas",
+      type: "string",
+      default: "'transparent'",
+    },
+    wireframes: {
+      description: "Enable wireframe mode to see physics bodies",
+      type: "boolean",
+      default: "false",
+    },
+    gravity: {
+      description: "Gravity strength applied to falling text",
+      type: "number",
+      default: "1",
+    },
+    mouseConstraintStiffness: {
+      description: "Stiffness of mouse interaction constraint",
+      type: "number",
+      default: "0.2",
+    },
+    fontSize: {
+      description: "Font size of the text",
+      type: "string",
+      default: "'1rem'",
+    },
+    className: {
+      description: "Additional CSS classes for the container",
+      type: "string",
+      default: "''",
+    },
+    onAnimationStart: {
+      description: "Callback fired when animation starts",
+      type: "() => void",
+      default: "undefined",
+    },
+    onAnimationEnd: {
+      description: "Callback fired when animation completes",
+      type: "() => void",
+      default: "undefined",
+    },
+    physicsOptions: {
+      description: "Custom physics properties for the text bodies",
+      type: "object",
+      default:
+        "{ restitution: 0.8, frictionAir: 0.01, friction: 0.2, density: 0.001 }",
+    },
+    "physicsOptions.restitution": {
+      description: "Bounciness of text (0-1)",
+      type: "number",
+      default: "0.8",
+    },
+    "physicsOptions.frictionAir": {
+      description: "Air resistance applied to text",
+      type: "number",
+      default: "0.01",
+    },
+    "physicsOptions.friction": {
+      description: "Friction when text touches surfaces",
+      type: "number",
+      default: "0.2",
+    },
+    "physicsOptions.density": {
+      description: "Mass density of text bodies",
+      type: "number",
+      default: "0.001",
+    },
+    initialVelocity: {
+      description: "Initial velocity applied to text",
+      type: "object",
+      default: "{ x: 5, y: 0, angular: 0.05 }",
+    },
+    "initialVelocity.x": {
+      description: "Horizontal velocity",
+      type: "number",
+      default: "5",
+    },
+    "initialVelocity.y": {
+      description: "Vertical velocity",
+      type: "number",
+      default: "0",
+    },
+    "initialVelocity.angular": {
+      description: "Rotational velocity",
+      type: "number",
+      default: "0.05",
+    },
+    highlightClassName: {
+      description: "CSS classes applied to highlighted words",
+      type: "string",
+      default: "'text-red-500 font-bold underline'",
+    },
+    wordSpacing: {
+      description: "Spacing between words in pixels",
+      type: "number",
+      default: "2",
+    },
+    minHeight: {
+      description: "Minimum height of the container",
+      type: "string",
+      default: "'300px'",
+    },
+    enableMouseInteraction: {
+      description: "Enable mouse dragging interaction",
+      type: "boolean",
+      default: "true",
+    },
+    resetKey: {
+      description: "Increment to reset the animation",
+      type: "number",
+      default: "0",
+    },
+    enableShadows: {
+      description: "Enable shadow projection effects",
+      type: "boolean",
+      default: "false",
+    },
+    shadowColor: {
+      description: "Color of the projected shadows",
+      type: "string",
+      default: "'rgba(0, 0, 0, 0.3)'",
+    },
+    shadowIntensity: {
+      description: "Opacity multiplier for shadows",
+      type: "number",
+      default: "0.5",
+    },
+    lightSourceY: {
+      description: "Y position of the virtual light source",
+      type: "number",
+      default: "0",
+    },
+  }}
+/>
+
+## API Reference
+
+<Link href="https://brm.io/matter-js/">Matter.js Documentation</Link>
+
+---

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "falling-text-demo",
+  "title": "Falling Text Demo",
+  "description": "Demo of the falling text component with various options",
+  "dependencies": [
+    "matter-js"
+  ],
+  "devDependencies": [
+    "@types/matter-js"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/falling-text-demo/index.tsx",
+      "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Welcome to FolioKit!\"\n        highlightWords={[\"FolioKit\"]}\n        trigger=\"auto\"\n        fontSize=\"2rem\"\n        enableShadows={true}\n        shadowIntensity={0.7}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

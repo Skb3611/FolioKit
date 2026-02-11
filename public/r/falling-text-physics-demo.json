@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "falling-text-physics-demo",
+  "title": "Falling Text Physics Demo",
+  "description": "Demo of the falling text component with various physics options",
+  "dependencies": [
+    "matter-js"
+  ],
+  "devDependencies": [
+    "@types/matter-js"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/demo/falling-text-physics-demo/index.tsx",
+      "content": "import FallingText from \"@/components/foliokit/falling-text\";\n\nexport default function FallingTextPhysicsDemo() {\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center\">\n      <FallingText\n        text=\"Dead drop with no restitution\"\n        trigger=\"auto\"\n        fontSize=\"2rem\"\n        physicsOptions={{\n          restitution: 0,\n          frictionAir: 0.02,\n          friction: 0.5,\n        }}\n        minHeight=\"300px\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
